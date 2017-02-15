@@ -1,0 +1,1 @@
+taxonomy-theme-category-host.php
