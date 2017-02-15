@@ -23,7 +23,7 @@
 define('DB_NAME', 'touren');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'nhan');
 
 /** MySQL database password */
 define('DB_PASSWORD', '@abcd1234');
@@ -77,7 +77,7 @@ $table_prefix  = 'tour_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
