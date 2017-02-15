@@ -235,12 +235,12 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
         require_once( ABSPATH . 'wp-admin/includes/file.php' );
         require_once( ABSPATH . 'wp-admin/includes/media.php' );
 
-         $attachment_id = media_handle_upload( 'f6et', 0 );
-         $attachment_id_1 = media_handle_upload( 'f6rs', 0 );
-         $attachment_id_2 = media_handle_upload( 'f6hl', 0 );
-         $attachment_id_3 = media_handle_upload( 'f5ue', 0 );
-         $attachment_id_4 = media_handle_upload( 'f5vi', 0 );
-         $attachment_id_5 = media_handle_upload( 'f9gp', 0 );
+         if ($_FILES['f6et']['name']!='') $attachment_id = media_handle_upload( 'f6et', 0 ); else $attachment_id = null;
+         if ($_FILES['f6rs']['name']!='')  $attachment_id_1 = media_handle_upload( 'f6rs', 0 ); else $attachment_id_1 = null;
+         if ($_FILES['f6hl']['name']!='') $attachment_id_2 = media_handle_upload( 'f6hl', 0 ); else $attachment_id_2 = null;
+         if ($_FILES['f5ue']['name']!='') $attachment_id_3 = media_handle_upload( 'f5ue', 0 ); else $attachment_id_3 = null;
+         if ($_FILES['f5vi']['name']!='') $attachment_id_4 = media_handle_upload( 'f5vi', 0 ); else $attachment_id_4 = null;
+         if ($_FILES['f9gp']['name']!='') $attachment_id_5 = media_handle_upload( 'f9gp', 0 ); else $attachment_id_5 = null;
 
         if ( is_wp_error( $attachment_id ) || is_wp_error( $attachment_id_1 ) || is_wp_error( $attachment_id_2 ) ||is_wp_error( $attachment_id_3) || is_wp_error( $attachment_id_4 ) || is_wp_error( $attachment_id_5)) {
           echo 'Error';
@@ -409,21 +409,21 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
                  <tr>
                     <th>Recommended spot ①</th>
                     <td>
-                        <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>'; ?>
+                             <?php if($attachment_id!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id,'thumbnail')[0].'"/>'; ?>
                         <?php echo $_POST['t8kg']; ?>
-                         <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?>
+                         <?php if($attachment_id_1!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_1,'thumbnail')[0].'"/>'; ?>
                          <?php echo $_POST['t5ue']; ?>
-                           <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?>
-                             <?php echo$_POST['t5wp']; ?> </td>
+                           <?php  if($attachment_id_2!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_2,'thumbnail')[0].'"/>'; ?>
+                             <?php echo$_POST['t5wp']; ?>  </td>
                 </tr>
                  <tr>
                     <th>Recommended gourmet</th>
                     <td>
-                       <?php echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?>
+                        <?php if($attachment_id_3!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_3,'thumbnail')[0].'"/>'; ?>
                        <?php echo $_POST['t4gt']; ?>
-                      <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?>
+                      <?php  if($attachment_id_4!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_4,'thumbnail')[0].'"/>'; ?>
                       <?php echo  $_POST['t0zf']; ?> 
-                    <?php  echo '<img src="'.wp_get_attachment_image_src($attachment_id_5
+                    <?php  if($attachment_id_5!=null) echo '<img src="'.wp_get_attachment_image_src($attachment_id_5
                     ,'thumbnail')[0].'"/>'; ?>
                       <?php echo $_POST['t8ia']; ?> </td>
                 </tr>
