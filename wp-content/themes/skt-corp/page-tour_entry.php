@@ -104,10 +104,8 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
         </ul>
     </div>
 </div>
-    <p class="back">
-        <a href="#" onclick="history.back();return false;">← Back</a>
-        <a href="#">↑ To the top of the page</a>
-    </p>
+
+
 </div>
            </p></div>
           </div>

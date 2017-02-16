@@ -77,7 +77,7 @@
 
 
 <?php 
-if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
+if (isset($_GET['amount']) and $_GET['amount']!=''):?> <?php
     $data_get = array('status' => 'yes',
         'money_amount'=>intval($_GET['amount']));
      global  $wpdb;
@@ -107,10 +107,6 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
         </ul>
     </div>
 </div>
-    <p class="back">
-        <a href="#" onclick="history.back();return false;">← Back</a>
-        <a href="#">↑ To the top of the page</a>
-    </p>
 </div>
            </p></div>
           </div>
@@ -119,9 +115,9 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
     </section>
 <?php endif;?>
  <?php   if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes') :?> <?php
-    	
+      
        $data_post = array(
-       	// 'name_guest' => $_POST['t3di_guest'],
+        // 'name_guest' => $_POST['t3di_guest'],
         // 'phone_guest' => $_POST['t0fl_guest'],
         // 'email_guest' => $_POST['t9hg_guest'],
         // 'code1_guest' => $_POST['t3gq_guest'],
@@ -252,7 +248,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
  ?>
 <?php  
  if (isset($_POST['to_step_2']) and $_POST['to_step_2']=='yes'):?><?php
- 	  $c6ux='';
+    $c6ux='';
         foreach ($_POST['c6ux'] as $key=>$value) {
             if($value!='') $c6ux.=$value.",";
         }
@@ -497,338 +493,338 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
  <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3'])&&!isset($_GET['amount'])):?>
 
                <form action="<?php echo esc_url(home_url('/'));?>hause_entry/" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-							<input type="hidden" name="to_step_2" value="yes">
+              <input type="hidden" name="to_step_2" value="yes">
                               <fieldset>
                             <table>
-				<tbody><tr>
-					<th>name<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t0zz" required name="t0zz" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>Phonetic<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t7pa" required name="t7pa" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>Price (per night)<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t8sb" required name="t8sb" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>Property address<em class="required">※</em></th>
-					<td>
-						<span class="lside">Postal code</span><input type="text" required id="t5kf" name="t5kf" size="4" value="" maxlength="3"><span class="rside">-</span><input type="text" id="t3hz" name="t3hz" size="7" value="" maxlength="4" required><br>
-						<span class="lside">Prefectures</span><select id="s0sx" required name="s0sx" size="1">
-							<option value="">----</option>
-							<optgroup label="北海道">
-								<option value="北海道">北海道</option>
-							</optgroup>
-							<optgroup label="東北">
-								<option value="青森県">青森県</option>
-								<option value="岩手県">岩手県</option>
-								<option value="宮城県">宮城県</option>
-								<option value="秋田県">秋田県</option>
-								<option value="山形県">山形県</option>
-								<option value="福島県">福島県</option>
-							</optgroup>
-							<optgroup label="関東">
-								<option value="茨城県">茨城県</option>
-								<option value="栃木県">栃木県</option>
-								<option value="群馬県">群馬県</option>
-								<option value="埼玉県">埼玉県</option>
-								<option value="千葉県">千葉県</option>
-								<option value="東京都">東京都</option>
-								<option value="神奈川県">神奈川県</option>
-								<option value="山梨県">山梨県</option>
-							</optgroup>
-							<optgroup label="信越">
-								<option value="長野県">長野県</option>
-								<option value="新潟県">新潟県</option>
-							</optgroup>
-							<optgroup label="北陸">
-								<option value="富山県">富山県</option>
-								<option value="石川県">石川県</option>
-								<option value="福井県">福井県</option>
-							</optgroup>
-							<optgroup label="東海">
-								<option value="岐阜県">岐阜県</option>
-								<option value="静岡県">静岡県</option>
-								<option value="愛知県">愛知県</option>
-								<option value="三重県">三重県</option>
-							</optgroup>
-							<optgroup label="近畿">
-								<option value="滋賀県">滋賀県</option>
-								<option value="京都府">京都府</option>
-								<option value="大阪府">大阪府</option>
-								<option value="兵庫県">兵庫県</option>
-								<option value="奈良県">奈良県</option>
-								<option value="和歌山県">和歌山県</option>
-							</optgroup>
-							<optgroup label="中国">
-								<option value="鳥取県">鳥取県</option>
-								<option value="島根県">島根県</option>
-								<option value="岡山県">岡山県</option>
-								<option value="広島県">広島県</option>
-								<option value="山口県">山口県</option>
-							</optgroup>
-							<optgroup label="四国">
-								<option value="徳島県">徳島県</option>
-								<option value="香川県">香川県</option>
-								<option value="愛媛県">愛媛県</option>
-								<option value="高知県">高知県</option>
-							</optgroup>
-							<optgroup label="九州">
-								<option value="福岡県">福岡県</option>
-								<option value="佐賀県">佐賀県</option>
-								<option value="長崎県">長崎県</option>
-								<option value="熊本県">熊本県</option>
-								<option value="大分県">大分県</option>
-								<option value="宮崎県">宮崎県</option>
-								<option value="鹿児島県">鹿児島県</option>
-							</optgroup>
-							<optgroup label="沖縄県">
-								<option value="沖縄県">沖縄県</option>
-							</optgroup>
-							<optgroup label="海外">
-								<option value="海外">海外</option>
-							</optgroup>
-						</select><br>
-						<span class="lside">Municipality</span><input type="text" required id="t4bf" name="t4bf" size="60" value="" maxlength="300"><br>
-						<span class="lside">Street address building</span><input type="text" id="t1yt" name="t1yt" size="60" value="" required maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>phone number<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t4my" required name="t4my" size="60" value="" maxlength="300"><br>
-						<span class="bside">No hyphen required</span>
-					</td>
-				</tr>
-				<tr>
-					<th>メールアドレス<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t0qm" required name="t0qm" size="60" value="" maxlength="300"><br>
-						<span class="bside">example： info@example.com</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Cellphone number<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t4cf" name="t4cf" required size="60" value=""  oninput="maxLengthCheck11(this)" maxlength="11"><br>
-						<span class="bside">example： 09011112222 (No hyphen required)</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Property type<em class="required">※</em></th>
-					<td>
-						
-						<span id="c6ux" class="checkbox">
-							<label for="c6ux0"><input type="checkbox" id="c6ux0" name="c6ux[]" value="All round charters">All round charters</label>
-							<label for="c6ux1"><input type="checkbox" id="c6ux1" name="c6ux[]" value="House">House</label>
-							<label for="c6ux2"><input type="checkbox" id="c6ux2" name="c6ux[]" value="Condominium">Condominium</label>
-							<label for="c6ux3"><input type="checkbox" id="c6ux3" name="c6ux[]" value="Apartment">Apartment</label>
-							<label for="c6ux4"><input type="checkbox" id="c6ux4" name="c6ux[]" value="Shared room">Shared room</label>
-							<label for="c6ux5"><input type="checkbox" id="c6ux5" name="c6ux[]" value="Western style room">Western style room</label>
-							<label for="c6ux6"><input type="checkbox" id="c6ux6" name="c6ux[]" value="Japanese style room">Japanese style room</label>
-							<label for="c6ux7"><input type="checkbox" id="c6ux7" name="c6ux[]" value="Individual room (living together with the host)">Individual room (living together with the host)</label>
-							<label for="c6ux8"><input type="checkbox" id="c6ux8" name="c6ux[]" value="Western-style room">Western-style room</label>
-							<label for="c6ux9"><input type="checkbox" id="c6ux9" name="c6ux[]" value="Japanese style room">Japanese style room</label>
-							<label for="c6ux10"><input type="checkbox" id="c6ux10" name="c6ux[]" value="Individual Room (Separate Host)">Individual Room (Separate Host)</label>
-							<label for="c6ux11"><input type="checkbox" id="c6ux11" name="c6ux[]" value="Western-style room">Western-style room</label>
-							<label for="c6ux12"><input type="checkbox" id="c6ux12" name="c6ux[]" value="Japanese style room">Japanese style room</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Bet type<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7jj" class="checkbox">
-							<label for="c7jj0"><input type="checkbox" id="c7jj0" name="c7jj[]" value="Bed">Bed</label>
-							<label for="c7jj1"><input type="checkbox" id="c7jj1" name="c7jj[]" value="Japanese style futon">Japanese style futon</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Number of guests allowed<em class="required">※</em></th>
-					<td>
-						
-						<span id="c2aw" class="checkbox">
-							<label for="c2aw0"><input type="checkbox" id="c2aw0" name="c2aw[]" value="1Man">1Man</label>
-							<label for="c2aw1"><input type="checkbox" id="c2aw1" name="c2aw[]" value="2Man">2Man</label>
-							<label for="c2aw2"><input type="checkbox" id="c2aw2" name="c2aw[]" value="3Man">3Man</label>
-							<label for="c2aw3"><input type="checkbox" id="c2aw3" name="c2aw[]" value="4Man">4Man</label>
-							<label for="c2aw4"><input type="checkbox" id="c2aw4" name="c2aw[]" value="5Man">5Man</label>
-							<label for="c2aw5"><input type="checkbox" id="c2aw5" name="c2aw[]" value="6Man">6Man</label>
-							<label for="c2aw6"><input type="checkbox" id="c2aw6" name="c2aw[]" value="7Man">7Man</label>
-							<label for="c2aw7"><input type="checkbox" id="c2aw7" name="c2aw[]" value="8Man">8Man</label>
-							<label for="c2aw8"><input type="checkbox" id="c2aw8" name="c2aw[]" value="9Man">9Man</label>
-							<label for="c2aw9"><input type="checkbox" id="c2aw9" name="c2aw[]" value="10Man">10Man</label>
-							<label for="c2aw10"><input type="checkbox" id="c2aw10" name="c2aw[]" value="10Man～">10Man～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Bathroom<em class="required">※</em></th>
-					<td>
-						
-						<span id="c2cp" class="checkbox">
-							<label for="c2cp0"><input type="checkbox" id="c2cp0" name="c2cp[]" value="1">1</label>
-							<label for="c2cp1"><input type="checkbox" id="c2cp1" name="c2cp[]" value="2">2</label>
-							<label for="c2cp2"><input type="checkbox" id="c2cp2" name="c2cp[]" value="3">3</label>
-							<label for="c2cp3"><input type="checkbox" id="c2cp3" name="c2cp[]" value="4">4</label>
-							<label for="c2cp4"><input type="checkbox" id="c2cp4" name="c2cp[]" value="5">5</label>
-							<label for="c2cp5"><input type="checkbox" id="c2cp5" name="c2cp[]" value="5～">5～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Bet number<em class="required">※</em></th>
-					<td>
-						
-						<span id="c1in" class="checkbox">
-							<label for="c1in0"><input type="checkbox" id="c1in0" name="c1in[]" value="1">1</label>
-							<label for="c1in1"><input type="checkbox" id="c1in1" name="c1in[]" value="2">2</label>
-							<label for="c1in2"><input type="checkbox" id="c1in2" name="c1in[]" value="3">3</label>
-							<label for="c1in3"><input type="checkbox" id="c1in3" name="c1in[]" value="4">4</label>
-							<label for="c1in4"><input type="checkbox" id="c1in4" name="c1in[]" value="5">5</label>
-							<label for="c1in5"><input type="checkbox" id="c1in5" name="c1in[]" value="6">6</label>
-							<label for="c1in6"><input type="checkbox" id="c1in6" name="c1in[]" value="7">7</label>
-							<label for="c1in7"><input type="checkbox" id="c1in7" name="c1in[]" value="8">8</label>
-							<label for="c1in8"><input type="checkbox" id="c1in8" name="c1in[]" value="9">9</label>
-							<label for="c1in9"><input type="checkbox" id="c1in9" name="c1in[]" value="10">10</label>
-							<label for="c1in10"><input type="checkbox" id="c1in10" name="c1in[]" value="10～">10～</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Amenity<em class="required">※</em></th>
-					<td>
-						
-						<span id="c9qd" class="checkbox">
-							<label for="c9qd0"><input type="checkbox" id="c9qd0" name="c9qd[]" value="Face towel">Face towel</label>
-							<label for="c9qd1"><input type="checkbox" id="c9qd1" name="c9qd[]" value="Body Towel">Body Towel</label>
-							<label for="c9qd2"><input type="checkbox" id="c9qd2" name="c9qd[]" value="Shampoo / Body Soap">Shampoo / Body Soap</label>
-							<label for="c9qd3"><input type="checkbox" id="c9qd3" name="c9qd[]" value="Dishes">Dishes</label>
-							<label for="c9qd4"><input type="checkbox" id="c9qd4" name="c9qd[]" value="breakfast">breakfast</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Facility<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7vj" class="checkbox">
-							<label for="c7vj0"><input type="checkbox" id="c7vj0" name="c7vj[]" value="tv set">tv set</label>
-							<label for="c7vj1"><input type="checkbox" id="c7vj1" name="c7vj[]" value="the internet">the internet</label>
-							<label for="c7vj2"><input type="checkbox" id="c7vj2" name="c7vj[]" value="WIFI">WIFI</label>
-							<label for="c7vj3"><input type="checkbox" id="c7vj3" name="c7vj[]" value="Air conditioner">Air conditioner</label>
-							<label for="c7vj4"><input type="checkbox" id="c7vj4" name="c7vj[]" value="heating">heating</label>
-							<label for="c7vj5"><input type="checkbox" id="c7vj5" name="c7vj[]" value="Washing machine">Washing machine</label>
-							<label for="c7vj6"><input type="checkbox" id="c7vj6" name="c7vj[]" value="Dryer">Dryer</label>
-							<label for="c7vj7"><input type="checkbox" id="c7vj7" name="c7vj[]" value="kitchen">kitchen</label>
-							<label for="c7vj8"><input type="checkbox" id="c7vj8" name="c7vj[]" value="microwave">microwave</label>
-							<label for="c7vj9"><input type="checkbox" id="c7vj9" name="c7vj[]" value="oven">oven</label>
-							<label for="c7vj10"><input type="checkbox" id="c7vj10" name="c7vj[]" value="toaster">toaster</label>
-							<label for="c7vj11"><input type="checkbox" id="c7vj11" name="c7vj[]" value="Free parking">Free parking</label>
-							<label for="c7vj12"><input type="checkbox" id="c7vj12" name="c7vj[]" value="A swimming pool">A swimming pool</label>
-							<label for="c7vj13"><input type="checkbox" id="c7vj13" name="c7vj[]" value="Gym">Gym</label>
-							<label for="c7vj14"><input type="checkbox" id="c7vj14" name="c7vj[]" value="Hair Dryer">Hair Dryer</label>
-							<label for="c7vj15"><input type="checkbox" id="c7vj15" name="c7vj[]" value="Iron">Iron</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Other<em class="required">※</em></th>
-					<td>
-						
-						<span id="c7bz" class="checkbox">
-							<label for="c7bz0"><input type="checkbox" id="c7bz0" name="c7bz[]" value="Pets are allowed">Pets are allowed</label>
-							<label for="c7bz1"><input type="checkbox" id="c7bz1" name="c7bz[]" value="Family / child possibility">Family / child possibility</label>
-							<label for="c7bz2"><input type="checkbox" id="c7bz2" name="c7bz[]" value="Smoking available">Smoking available</label>
-							<label for="c7bz3"><input type="checkbox" id="c7bz3" name="c7bz[]" value="wheelchair">wheelchair</label>
-							<label for="c7bz4"><input type="checkbox" id="c7bz4" name="c7bz[]" value="24 hour check-in available">24 hour check-in available</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Minimum stay<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t0mc" required name="t0mc" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>check-in<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t8vp" required name="t8vp" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>check out<em class="required">※</em></th>
-					<td>
-						
-						<input type="text" id="t9ju" required name="t9ju" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>Cleaning fee<em class="required">※</em></th>
-					<td>
-						
-						<span id="c1jz" class="checkbox">
-							<label for="c1jz0"><input type="checkbox" id="c1jz0" name="c1jz[]" value="Including">Including</label>
-							<label for="c1jz1"><input type="checkbox" id="c1jz1" name="c1jz[]" value="Separately">Separately</label>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<th>Charges for separate cleaning fee</th>
-					<td>
-						
-						<input type="text" id="t4ai" name="t4ai" size="60" value="" maxlength="300">
-					</td>
-				</tr>
-				<tr>
-					<th>Photo</th>
-					<td>
-						<input type="file" id="f9og" name="f9og" size="60"><br>
-						<input type="file" id="f9oe" name="f9oe" size="60"><br>
-						<input type="file" id="f5iq" name="f5iq" size="60"><br>
-						<input type="file" id="f8ss" name="f8ss" size="60"><br>
-						<input type="file" id="f4vl" name="f4vl" size="60"><br>
-						<input type="file" id="f7fh" name="f7fh" size="60"><br>
-						<input type="file" id="f1iw" name="f1iw" size="60"><br>
-						<input type="file" id="f2va" name="f2va" size="60"><br>
-						<input type="file" id="f3jx" name="f3jx" size="60"><br>
-						<input type="file" id="f6oc" name="f6oc" size="60"><br>
-						<input type="file" id="f1uw" name="f1uw" size="60"><br>
-						<input type="file" id="f6ta" name="f6ta" size="60"><br>
-						<input type="file" id="f2ab" name="f2ab" size="60"><br>
-						<input type="file" id="f7cv" name="f7cv" size="60"><br>
-						<input type="file" id="f0tv" name="f0tv" size="60">
-					</td>
-				</tr>
-				<tr>
-					<th>Homepage URL</th>
-					<td>
-						
-						<span class="aside">※If you already have air bnb etc., please fill in the page URL.</span><br>
-						<input type="text" id="t6rs" name="t6rs" size="60" value="" maxlength="300"><br>
-						<span class="bside">example： http://www.example.com/</span>
-					</td>
-				</tr>
-			</tbody></table>
+        <tbody><tr>
+          <th>Name<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t0zz" required name="t0zz" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>Phonetic<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t7pa" required name="t7pa" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>Price (per night)<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t8sb" required name="t8sb" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>Property address<em class="required">※</em></th>
+          <td>
+            <span class="lside">Postal code</span><input type="text" required id="t5kf" name="t5kf" size="4" value="" maxlength="3"><span class="rside">-</span><input type="text" id="t3hz" name="t3hz" size="7" value="" maxlength="4" required><br>
+            <span class="lside">Prefectures</span><select id="s0sx" required name="s0sx" size="1">
+              <option value="">----</option>
+              <optgroup label="北海道">
+                <option value="北海道">北海道</option>
+              </optgroup>
+              <optgroup label="東北">
+                <option value="青森県">青森県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="山形県">山形県</option>
+                <option value="福島県">福島県</option>
+              </optgroup>
+              <optgroup label="関東">
+                <option value="茨城県">茨城県</option>
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="千葉県">千葉県</option>
+                <option value="東京都">東京都</option>
+                <option value="神奈川県">神奈川県</option>
+                <option value="山梨県">山梨県</option>
+              </optgroup>
+              <optgroup label="信越">
+                <option value="長野県">長野県</option>
+                <option value="新潟県">新潟県</option>
+              </optgroup>
+              <optgroup label="北陸">
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+              </optgroup>
+              <optgroup label="東海">
+                <option value="岐阜県">岐阜県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="愛知県">愛知県</option>
+                <option value="三重県">三重県</option>
+              </optgroup>
+              <optgroup label="近畿">
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+              </optgroup>
+              <optgroup label="中国">
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+              </optgroup>
+              <optgroup label="四国">
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+              </optgroup>
+              <optgroup label="九州">
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="大分県">大分県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+              </optgroup>
+              <optgroup label="沖縄県">
+                <option value="沖縄県">沖縄県</option>
+              </optgroup>
+              <optgroup label="海外">
+                <option value="海外">海外</option>
+              </optgroup>
+            </select><br>
+            <span class="lside">Municipality</span><input type="text" required id="t4bf" name="t4bf" size="60" value="" maxlength="300"><br>
+            <span class="lside">Street address building</span><input type="text" id="t1yt" name="t1yt" size="60" value="" required maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>phone number<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t4my" required name="t4my" size="60" value="" maxlength="300"><br>
+            <span class="bside">No hyphen required</span>
+          </td>
+        </tr>
+        <tr>
+          <th>Email<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t0qm" required name="t0qm" size="60" value="" maxlength="300"><br>
+            <span class="bside">example： info@example.com</span>
+          </td>
+        </tr>
+        <tr>
+          <th>Cellphone number<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t4cf" name="t4cf" required size="60" value=""  oninput="maxLengthCheck11(this)" maxlength="11"><br>
+            <span class="bside">example： 09011112222 (No hyphen required)</span>
+          </td>
+        </tr>
+        <tr>
+          <th>Property type<em class="required">※</em></th>
+          <td>
+            
+            <span id="c6ux" class="checkbox">
+              <label for="c6ux0"><input type="checkbox" id="c6ux0" name="c6ux[]" value="All round charters">All round charters</label>
+              <label for="c6ux1"><input type="checkbox" id="c6ux1" name="c6ux[]" value="House">House</label>
+              <label for="c6ux2"><input type="checkbox" id="c6ux2" name="c6ux[]" value="Condominium">Condominium</label>
+              <label for="c6ux3"><input type="checkbox" id="c6ux3" name="c6ux[]" value="Apartment">Apartment</label>
+              <label for="c6ux4"><input type="checkbox" id="c6ux4" name="c6ux[]" value="Shared room">Shared room</label>
+              <label for="c6ux5"><input type="checkbox" id="c6ux5" name="c6ux[]" value="Western style room">Western style room</label>
+              <label for="c6ux6"><input type="checkbox" id="c6ux6" name="c6ux[]" value="Japanese style room">Japanese style room</label>
+              <label for="c6ux7"><input type="checkbox" id="c6ux7" name="c6ux[]" value="Individual room (living together with the host)">Individual room (living together with the host)</label>
+              <label for="c6ux8"><input type="checkbox" id="c6ux8" name="c6ux[]" value="Western-style room">Western-style room</label>
+              <label for="c6ux9"><input type="checkbox" id="c6ux9" name="c6ux[]" value="Japanese style room">Japanese style room</label>
+              <label for="c6ux10"><input type="checkbox" id="c6ux10" name="c6ux[]" value="Individual Room (Separate Host)">Individual Room (Separate Host)</label>
+              <label for="c6ux11"><input type="checkbox" id="c6ux11" name="c6ux[]" value="Western-style room">Western-style room</label>
+              <label for="c6ux12"><input type="checkbox" id="c6ux12" name="c6ux[]" value="Japanese style room">Japanese style room</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Bet type<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7jj" class="checkbox">
+              <label for="c7jj0"><input type="checkbox" id="c7jj0" name="c7jj[]" value="Bed">Bed</label>
+              <label for="c7jj1"><input type="checkbox" id="c7jj1" name="c7jj[]" value="Japanese style futon">Japanese style futon</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Number of guests allowed<em class="required">※</em></th>
+          <td>
+            
+            <span id="c2aw" class="checkbox">
+              <label for="c2aw0"><input type="checkbox" id="c2aw0" name="c2aw[]" value="1Man">1Man</label>
+              <label for="c2aw1"><input type="checkbox" id="c2aw1" name="c2aw[]" value="2Man">2Man</label>
+              <label for="c2aw2"><input type="checkbox" id="c2aw2" name="c2aw[]" value="3Man">3Man</label>
+              <label for="c2aw3"><input type="checkbox" id="c2aw3" name="c2aw[]" value="4Man">4Man</label>
+              <label for="c2aw4"><input type="checkbox" id="c2aw4" name="c2aw[]" value="5Man">5Man</label>
+              <label for="c2aw5"><input type="checkbox" id="c2aw5" name="c2aw[]" value="6Man">6Man</label>
+              <label for="c2aw6"><input type="checkbox" id="c2aw6" name="c2aw[]" value="7Man">7Man</label>
+              <label for="c2aw7"><input type="checkbox" id="c2aw7" name="c2aw[]" value="8Man">8Man</label>
+              <label for="c2aw8"><input type="checkbox" id="c2aw8" name="c2aw[]" value="9Man">9Man</label>
+              <label for="c2aw9"><input type="checkbox" id="c2aw9" name="c2aw[]" value="10Man">10Man</label>
+              <label for="c2aw10"><input type="checkbox" id="c2aw10" name="c2aw[]" value="10Man～">10Man～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Bathroom<em class="required">※</em></th>
+          <td>
+            
+            <span id="c2cp" class="checkbox">
+              <label for="c2cp0"><input type="checkbox" id="c2cp0" name="c2cp[]" value="1">1</label>
+              <label for="c2cp1"><input type="checkbox" id="c2cp1" name="c2cp[]" value="2">2</label>
+              <label for="c2cp2"><input type="checkbox" id="c2cp2" name="c2cp[]" value="3">3</label>
+              <label for="c2cp3"><input type="checkbox" id="c2cp3" name="c2cp[]" value="4">4</label>
+              <label for="c2cp4"><input type="checkbox" id="c2cp4" name="c2cp[]" value="5">5</label>
+              <label for="c2cp5"><input type="checkbox" id="c2cp5" name="c2cp[]" value="5～">5～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Bet number<em class="required">※</em></th>
+          <td>
+            
+            <span id="c1in" class="checkbox">
+              <label for="c1in0"><input type="checkbox" id="c1in0" name="c1in[]" value="1">1</label>
+              <label for="c1in1"><input type="checkbox" id="c1in1" name="c1in[]" value="2">2</label>
+              <label for="c1in2"><input type="checkbox" id="c1in2" name="c1in[]" value="3">3</label>
+              <label for="c1in3"><input type="checkbox" id="c1in3" name="c1in[]" value="4">4</label>
+              <label for="c1in4"><input type="checkbox" id="c1in4" name="c1in[]" value="5">5</label>
+              <label for="c1in5"><input type="checkbox" id="c1in5" name="c1in[]" value="6">6</label>
+              <label for="c1in6"><input type="checkbox" id="c1in6" name="c1in[]" value="7">7</label>
+              <label for="c1in7"><input type="checkbox" id="c1in7" name="c1in[]" value="8">8</label>
+              <label for="c1in8"><input type="checkbox" id="c1in8" name="c1in[]" value="9">9</label>
+              <label for="c1in9"><input type="checkbox" id="c1in9" name="c1in[]" value="10">10</label>
+              <label for="c1in10"><input type="checkbox" id="c1in10" name="c1in[]" value="10～">10～</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Amenity<em class="required">※</em></th>
+          <td>
+            
+            <span id="c9qd" class="checkbox">
+              <label for="c9qd0"><input type="checkbox" id="c9qd0" name="c9qd[]" value="Face towel">Face towel</label>
+              <label for="c9qd1"><input type="checkbox" id="c9qd1" name="c9qd[]" value="Body Towel">Body Towel</label>
+              <label for="c9qd2"><input type="checkbox" id="c9qd2" name="c9qd[]" value="Shampoo / Body Soap">Shampoo / Body Soap</label>
+              <label for="c9qd3"><input type="checkbox" id="c9qd3" name="c9qd[]" value="Dishes">Dishes</label>
+              <label for="c9qd4"><input type="checkbox" id="c9qd4" name="c9qd[]" value="breakfast">breakfast</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Facility<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7vj" class="checkbox">
+              <label for="c7vj0"><input type="checkbox" id="c7vj0" name="c7vj[]" value="tv set">tv set</label>
+              <label for="c7vj1"><input type="checkbox" id="c7vj1" name="c7vj[]" value="the internet">the internet</label>
+              <label for="c7vj2"><input type="checkbox" id="c7vj2" name="c7vj[]" value="WIFI">WIFI</label>
+              <label for="c7vj3"><input type="checkbox" id="c7vj3" name="c7vj[]" value="Air conditioner">Air conditioner</label>
+              <label for="c7vj4"><input type="checkbox" id="c7vj4" name="c7vj[]" value="heating">heating</label>
+              <label for="c7vj5"><input type="checkbox" id="c7vj5" name="c7vj[]" value="Washing machine">Washing machine</label>
+              <label for="c7vj6"><input type="checkbox" id="c7vj6" name="c7vj[]" value="Dryer">Dryer</label>
+              <label for="c7vj7"><input type="checkbox" id="c7vj7" name="c7vj[]" value="kitchen">kitchen</label>
+              <label for="c7vj8"><input type="checkbox" id="c7vj8" name="c7vj[]" value="microwave">microwave</label>
+              <label for="c7vj9"><input type="checkbox" id="c7vj9" name="c7vj[]" value="oven">oven</label>
+              <label for="c7vj10"><input type="checkbox" id="c7vj10" name="c7vj[]" value="toaster">toaster</label>
+              <label for="c7vj11"><input type="checkbox" id="c7vj11" name="c7vj[]" value="Free parking">Free parking</label>
+              <label for="c7vj12"><input type="checkbox" id="c7vj12" name="c7vj[]" value="A swimming pool">A swimming pool</label>
+              <label for="c7vj13"><input type="checkbox" id="c7vj13" name="c7vj[]" value="Gym">Gym</label>
+              <label for="c7vj14"><input type="checkbox" id="c7vj14" name="c7vj[]" value="Hair Dryer">Hair Dryer</label>
+              <label for="c7vj15"><input type="checkbox" id="c7vj15" name="c7vj[]" value="Iron">Iron</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Other<em class="required">※</em></th>
+          <td>
+            
+            <span id="c7bz" class="checkbox">
+              <label for="c7bz0"><input type="checkbox" id="c7bz0" name="c7bz[]" value="Pets are allowed">Pets are allowed</label>
+              <label for="c7bz1"><input type="checkbox" id="c7bz1" name="c7bz[]" value="Family / child possibility">Family / child possibility</label>
+              <label for="c7bz2"><input type="checkbox" id="c7bz2" name="c7bz[]" value="Smoking available">Smoking available</label>
+              <label for="c7bz3"><input type="checkbox" id="c7bz3" name="c7bz[]" value="wheelchair">wheelchair</label>
+              <label for="c7bz4"><input type="checkbox" id="c7bz4" name="c7bz[]" value="24 hour check-in available">24 hour check-in available</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Minimum stay<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t0mc" required name="t0mc" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>check-in<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t8vp" required name="t8vp" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>check out<em class="required">※</em></th>
+          <td>
+            
+            <input type="text" id="t9ju" required name="t9ju" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>Cleaning fee<em class="required">※</em></th>
+          <td>
+            
+            <span id="c1jz" class="checkbox">
+              <label for="c1jz0"><input type="checkbox" id="c1jz0" name="c1jz[]" value="Including">Including</label>
+              <label for="c1jz1"><input type="checkbox" id="c1jz1" name="c1jz[]" value="Separately">Separately</label>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>Charges for separate cleaning fee</th>
+          <td>
+            
+            <input type="text" id="t4ai" name="t4ai" size="60" value="" maxlength="300">
+          </td>
+        </tr>
+        <tr>
+          <th>Photo</th>
+          <td>
+            <input type="file" id="f9og" name="f9og" size="60"><br>
+            <input type="file" id="f9oe" name="f9oe" size="60"><br>
+            <input type="file" id="f5iq" name="f5iq" size="60"><br>
+            <input type="file" id="f8ss" name="f8ss" size="60"><br>
+            <input type="file" id="f4vl" name="f4vl" size="60"><br>
+            <input type="file" id="f7fh" name="f7fh" size="60"><br>
+            <input type="file" id="f1iw" name="f1iw" size="60"><br>
+            <input type="file" id="f2va" name="f2va" size="60"><br>
+            <input type="file" id="f3jx" name="f3jx" size="60"><br>
+            <input type="file" id="f6oc" name="f6oc" size="60"><br>
+            <input type="file" id="f1uw" name="f1uw" size="60"><br>
+            <input type="file" id="f6ta" name="f6ta" size="60"><br>
+            <input type="file" id="f2ab" name="f2ab" size="60"><br>
+            <input type="file" id="f7cv" name="f7cv" size="60"><br>
+            <input type="file" id="f0tv" name="f0tv" size="60">
+          </td>
+        </tr>
+        <tr>
+          <th>Homepage URL</th>
+          <td>
+            
+            <span class="aside">※If you already have air bnb etc., please fill in the page URL.</span><br>
+            <input type="text" id="t6rs" name="t6rs" size="60" value="" maxlength="300"><br>
+            <span class="bside">example： http://www.example.com/</span>
+          </td>
+        </tr>
+      </tbody></table>
                               <p class="submit_bt_wrap">
                                 <input type="reset" value="Redo"><input type="submit" value="To confirmation screen">
                               </p>
@@ -854,38 +850,38 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
 <p style="margin:0">
 <script type="text/javascript">
 $(window).ready( function() {
-	$("#t3gq_guest").jpostal({
-		postcode : [
-			"#t3gq_guest",
-			"#t0sz_guest"
-		],
-		address : {
-			"#s5bo_guest"  : "%3",
-			"#t4ii_guest"  : "%4",
-			"#t0pi_guest"  : "%5",
+  $("#t3gq_guest").jpostal({
+    postcode : [
+      "#t3gq_guest",
+      "#t0sz_guest"
+    ],
+    address : {
+      "#s5bo_guest"  : "%3",
+      "#t4ii_guest"  : "%4",
+      "#t0pi_guest"  : "%5",
 '#address1_kana'  : '%8',
-			'#address2_kana'  : '%9',
-			'#address3_kana'  : '%10'
-		}
-	});
+      '#address2_kana'  : '%9',
+      '#address3_kana'  : '%10'
+    }
+  });
 });
 </script>
 <script type="text/javascript">
-	$(window).ready( function() {
-	$("#t5kf").jpostal({
-		postcode : [
-			"#t5kf",
-			"#t3hz"
-		],
-		address : {
-			"#s0sx"  : "%3",
-			"#t4bf"  : "%4",
-			"#t1yt"  : "%5",
+  $(window).ready( function() {
+  $("#t5kf").jpostal({
+    postcode : [
+      "#t5kf",
+      "#t3hz"
+    ],
+    address : {
+      "#s0sx"  : "%3",
+      "#t4bf"  : "%4",
+      "#t1yt"  : "%5",
 '#address1_kana'  : '%8',
-			'#address2_kana'  : '%9',
-			'#address3_kana'  : '%10'
-		}
-	});
+      '#address2_kana'  : '%9',
+      '#address3_kana'  : '%10'
+    }
+  });
 });
 </script>
 </p>
