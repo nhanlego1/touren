@@ -83,6 +83,41 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
      global  $wpdb;
     $wpdb->update( 'host_reg', $data_get,  array( 'id' => intval($_GET['order_id'] ) ));
     ?>
+<section id="contact">
+      <div class="container">
+       <div class="row">
+          <div class="col-lg-12 col-md-12"> 
+            <div class="title_area">
+              <h2 class="title_two">To everyone registered as an interpreter guide (host)</h2>
+              <span></span><br><br>
+              <div class="title_three"><p2>【Notes on Registration】 <br> After matching with the client (guest) is actually established after registering on this site, <br> <br> When actually guide you to the city or hometown you live in, Do not qualify as a qualified interpreter guide <br> Explain and provide guidance on the "culture, geography, history, politics, religion" of the region and Japan based on their own knowledge / knowledge and interpretation guide business law , It will be punished based on travel business law. <br> Please be careful not to introduce / guide about "Culture · Geography · History · Politics · Religion" on the guidance when hosts do not possess interpreter guide qualifications.</p2><br></div><br>
+                                      <p>Those who wish to register an interpreter guide can register from the form below.<br>
+                                      </p><p>In addition to Japanese, please input in interpretable language.<br><br>
+                                     <p2>Age, mobile number, and address are not displayed on the site. After the matching is established, it will be sent directly to the guest.</p2>
+        <br>
+        <br>
+
+          <div id="mainform">
+  <h2><a href="http://extourjapan.lakita.vn/">Become a Host (Interpreter Guide) Entry Form</a></h2>
+  <p class="step"><span>1. Enter form</span> → <span>2. Confirmation of input contents</span> → <em>3. send completely</em></p>
+  <div>
+    <ul>
+      <li>I sent an e-mail.</li>
+      <li>Please wait for a while until it is replied.</li>
+      <li>Even if it is December 24 (Saturday) after 1 week, if you do not receive a reply, there is a possibility that it has not arrived, please send again.</li>
+    </ul>
+  </div>
+</div>
+  <p class="back">
+    <a href="#" onclick="history.back();return false;">← Back</a>
+    <a href="#">↑ To the top of the page</a>
+  </p>
+</div>
+           </p></div>
+          </div>
+       </div>
+       </div>
+    </section>   
 <?php endif;?>
 <?php if(isset($_POST['to_step_3']) and $_POST['to_step_3']=='yes'):?>
 <?php
@@ -195,7 +230,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
       $('#amount').change(function(){
         var order_id=$("#order_id").val();
         var amount=$(this).val();
-        $("#return").val('<?php echo esc_url(home_url('/'));?>thankyou?order_id='+ order_id+ '&amount='+amount)
+        $("#return").val('<?php echo esc_url(home_url('/'));?>host_entry?order_id='+ order_id+ '&amount='+amount)
       });
   </script>
     <!-- <input type="hidden" name="option_select0" value="Monthly Membership">
@@ -439,7 +474,7 @@ if (isset($_GET['amount']) and $_GET['amount']!=''):?><?php
     </form>
 
  <?php endif;?>
- <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3'])):?>
+ <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3']) &&!isset($_GET['amount'])):?>
                           <form action="<?php echo esc_url(home_url('/'));?>host_entry/" method="post" enctype="multipart/form-data" accept-charset="utf-8" style="max-width:769px;margin: 0px auto;">
                             <input type="hidden" name="to_step_2" value="yes">
                          </br>
