@@ -185,7 +185,14 @@ $post_detail_id = $_GET['post-detail'];
                     <td>1</td>
                   </tr>
                   <tr>          
-                    <td colspan="7"><b>★☆ユーザー投稿レビュー☆★</b><br><br><img src="../img/revie.jpg" alt="img"></td>
+                    <td colspan="7"><b>★☆ユーザー投稿レビュー☆★</b><br><br>
+                      <!--<img src="../img/revie.jpg" alt="img"> -->
+                        <?php
+                    // If comments are open or we have at least one comment, load up the comment template
+                    if ( comments_open($post_detail_id) || '0' != get_comments_number($post_detail_id) )
+                    	comments_template();
+                    ?> 
+                    </td>
                   </tr>
                 </tbody>
               </table>             

@@ -254,7 +254,7 @@ Please come and enjoy the charming Japanese trip! It is!</p>
              <?php endif ?>
           <?php if ($count >=1 && $count <5):?>	
                             <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
                                   
                                   <?php the_content(); ?>
@@ -268,7 +268,7 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 						<?php endif ?>
           		<?php if ($count>=5 && $count<=8):?>	
           			<div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="host-avatar"><a href="host_details?post-detail=<?php echo get_the_ID();?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
+                                <div class="host-avatar"><a href="<?php echo get_permalink( $post->ID );?>"><img class="host-img" src="<?php the_post_thumbnail_url() ?>" /></a><span><strong><?php the_title(); ?> </strong></span>
                                 </div>
                                   
                                   <?php the_content(); ?>
@@ -293,99 +293,86 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 
 
 <div class="row testimonial">
-<div class="our-service margin-top-25">
-<p class="service">testimonial <span class="lines"></span></p>
+	<div class="our-service margin-top-25">
+	<p class="service">testimonial <span class="lines"></span></p>
+	
+	</div>
+	<div class="container">
+	
+	     <?php
+    $count=0;
+    $args = array( 
+                        'category_name' => 'testimonial', 
+                        'orderby'=>'date',
+                        'order'=>'DESC', 
+                        'posts_per_page' => 4, 
+                      );
 
-</div>
-<div class="container">
-<div class="row">
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-1.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">Australia</p>
 
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
+    $wp_query = new WP_Query();
+    $wp_query->query( $args );
+    while ($wp_query->have_posts()){
+     $wp_query->the_post();
+         $count++; ?>
+         <?php if($count==1):?>
 
-I will go to Kyoto from April 5th to 8th. I'm looking for someone who will pick you up at Kyoto Station and will show you the day. Because the train arrives at 6 o'clock in the morning, please take it from 6 am to around 8 pm. I am Australian.
-<p class="ps text-right">Published on：Nian May Day</p>
-<p class="sign text-right">Recruitment Details</p>
+             <div class="row">
+             <?php endif ?>
+          <?php if ($count >=1 && $count <= 2):?>	
+		            <div class="col-xs-12 col-md-6">
+						<div class="row">
+						<div class="col-xs-3"><img class="img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) )?>" /></div>
+						<div class="col-xs-9">
+						<p class="testimonial-name"><?php the_title(); ?></p>
+						<p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+						
+						<div class="hr"></div>
+						<div class="row">
+						<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
+						<div class="col-xs-10 testimonial-content">
+					     <?php the_content();?>
+						<p class="ps text-right">Published on：<?php echo get_the_date( 'd/m/Y'); ?></p>
+						<p class="sign text-right" ><a href="<?php echo get_permalink( get_the_ID() ); ?> " style="color: #a60101;">Recruitment Details</a></p>
+						
+						</div>
+						</div>
+						</div>
+						</div>
+					</div>
+            <?php endif ?>
+          	<?php if ($count==2):?>	
+						</div>
+						<div class="row">
+						<?php endif ?>
+          		<?php if ($count>=3 && $count<=4):?>	
+	          			 <div class="col-xs-12 col-md-6">
+							<div class="row">
+							<div class="col-xs-3"><img class="img-responsive" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) )?>" /></div>
+							<div class="col-xs-9">
+							<p class="testimonial-name"><?php the_title(); ?></p>
+							<p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+							
+							<div class="hr"></div>
+							<div class="row">
+							<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
+							<div class="col-xs-10 testimonial-content">
+						     <?php the_content();?>
+							<p class="ps text-right">Published on：<?php echo get_the_date( 'd/m/Y');?></p>
+                            <p class="sign text-right" ><a href="<?php echo get_permalink( get_the_ID() ); ?> " style="color: #a60101;">Recruitment Details</a></p>
+							
+							</div>
+							</div>
+							</div>
+							</div>
+						</div>
+                      <?php endif ?>
+          			<?php if ($count==4):?>	
+						</div>
+          			<?php endif ?>
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-2.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">Australia</p>
-
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-I will go to Kyoto from April 5th to 8th. I'm looking for someone who will pick you up at Kyoto Station and will show you the day. Because the train arrives at 6 o'clock in the morning, please take it from 6 am to around 8 pm. I am Australian.
-<p class="ps text-right">Published on：Nian May Day</p>
-<p class="sign text-right">Recruitment Details</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-3.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">Australia</p>
-
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-I will go to Kyoto from April 5th to 8th. I'm looking for someone who will pick you up at Kyoto Station and will show you the day. Because the train arrives at 6 o'clock in the morning, please take it from 6 am to around 8 pm. I am Australian.
-<p class="ps text-right">Published on：Nian May Day</p>
-<p class="sign text-right">Recruitment Details</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xs-12 col-md-6">
-<div class="row">
-<div class="col-xs-3"><img class="img-responsive" src="testimonial-4.png" /></div>
-<div class="col-xs-9">
-<p class="testimonial-name">ohnathan Doe</p>
-<p class="testimonial-job">Australia</p>
-<div class="hr"></div>
-<div class="row">
-<div class="col-xs-2"><img class="img-responsive" src="quote.png" /></div>
-<div class="col-xs-10 testimonial-content">
-
-I will go to Kyoto from April 5th to 8th. I'm looking for someone who will pick you up at Kyoto Station and will show you the day. Because the train arrives at 6 o'clock in the morning, please take it from 6 am to around 8 pm. I am Australian.
-<p class="ps text-right">Published on：Nian May Day</p>
-<p class="sign text-right">Recruitment Details</p>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+         
+       <?php }?>
+	</div>
 </div>
 </div>
 
