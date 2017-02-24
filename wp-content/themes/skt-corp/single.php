@@ -30,7 +30,7 @@ get_header();
 		                  <h1><b><?=get_the_title($post->ID)?></b></h1>
 		                     <?php if(in_category('hostlist')):?>
 		                       <span class="singlecourse_author">
-		                       <img alt="img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>">Guide Area : Tokyo, Kyoto, Hokkaido <a href="http://auctions.yahoo.co.jp/jp/show/qanda?aID=e207814544" class="question">Q&amp;A</a></span><span class="singlecourse_price"><i class="fa fa-usd" aria-hidden="true"></i><?php echo get_post_meta($post->ID, 'price', TRUE); ?>/Per One Hour</span>
+		                       <img alt="img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>">Guide Area : Tokyo, Kyoto, Hokkaido <a href="<?php echo esc_url(home_url('/'));?>list_qa" class="question">Q&amp;A</a></span><span class="singlecourse_price"><i class="fa fa-usd" aria-hidden="true"></i><?php echo get_post_meta($post->ID, 'price', TRUE); ?>/Per One Hour</span>
 		                       <?php else:?>
 		                            <span class="singlecourse_author">
 					                 <img alt="img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) )?>"><?=get_the_title($post->ID)?></span><span class="singlecourse_price"><?php echo get_post_meta($post->ID, 'job', TRUE); ?>
