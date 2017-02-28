@@ -45,16 +45,20 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 <div id="notice" class="tab-pane fade active in">
     <ul class="news_tab">
         <?php
-            $arg = array(
-                'post_type' => 'post',
-                'category_name' => 'achive',
-                'post_per_page' => 3,
-                'order' => 'ASC',
-                'post_status' => 'publish',
+            $args = array(
+            		'category_name' => 'achive',
+            		'post_status' => 'publish',
+            		'orderby'=>'date',
+            		'order'=>'DESC',
+            		'posts_per_page' => 3,
             );
-
-            $list_blog = new WP_Query($arg);
-            while ( $list_blog->have_posts() ) : $list_blog->the_post();
+            
+            
+            $wp_query = new WP_Query();
+            $wp_query->query( $args );
+            while ($wp_query->have_posts()):
+            	$wp_query->the_post();
+            
         ?>
         <li>
             <div class="media">
@@ -70,7 +74,6 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 
         <?php
             endwhile; // end of the loop.
-            wp_reset_postdata();
         ?>
     </ul>
     <a class="see_all" href="<?php echo esc_url(home_url('/')); ?>/category/achive/">See All</a>
@@ -79,16 +82,19 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 <div id="news" class="tab-pane fade">
     <ul class="news_tab">
         <?php
-            $arg1 = array(
-                'post_type' => 'post',
-                'category_name' => 'news',
-                'post_per_page' => 3,
-                'order' => 'ASC',
-                'post_status' => 'publish',
+            $args = array(
+            		'category_name' => 'news',
+            		'post_status' => 'publish',
+            		'orderby'=>'date',
+            		'order'=>'DESC',
+            		'posts_per_page' => 3,
             );
-
-            $list_news = new WP_Query($arg1);
-            while ( $list_news->have_posts() ) : $list_news->the_post();
+            
+            
+            $wp_query = new WP_Query();
+            $wp_query->query( $args );
+            while ($wp_query->have_posts()):
+            $wp_query->the_post();
         ?>
         <li>
             <div class="media">
@@ -102,7 +108,7 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 
         <?php
             endwhile; // end of the loop.
-            wp_reset_postdata();
+            
         ?>
     </ul>
     <a class="see_all" href="tourlist">ツアーリスト</a>
@@ -112,16 +118,19 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 <div id="events" class="tab-pane fade">
     <ul class="events_tab">
         <?php
-            $arg2 = array(
-                'post_type' => 'post',
-                'category_name' => 'events',
-                'post_per_page' => 3,
-                'order' => 'ASC',
-                'post_status' => 'publish',
+            $args = array(
+            		'category_name' => 'events',
+            		'post_status' => 'publish',
+            		'orderby'=>'date',
+            		'order'=>'DESC',
+            		'posts_per_page' => 3,
             );
-
-            $list_events = new WP_Query($arg2);
-            while ( $list_events->have_posts() ) : $list_events->the_post();
+            
+            
+            $wp_query = new WP_Query();
+            $wp_query->query( $args );
+            while ($wp_query->have_posts()):
+            $wp_query->the_post();
         ?>
         <li>
             <div class="media">
@@ -134,7 +143,6 @@ Please come and enjoy the charming Japanese trip! It is!</p>
 
         <?php
             endwhile; // end of the loop.
-            wp_reset_postdata();
         ?>
     </ul>
     <a class="see_all" href="<?php echo esc_url(home_url('/')); ?>/category/events/">See All</a>
