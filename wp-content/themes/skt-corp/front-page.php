@@ -111,7 +111,7 @@ Please come and enjoy the charming Japanese trip! It is!</p>
             
         ?>
     </ul>
-    <a class="see_all" href="tourlist">ツアーリスト</a>
+         <a class="see_all" href="<?php echo esc_url(home_url('/')); ?>/category/news/">See All</a>
 
 </div>
     <!-- Start events tab content -->
