@@ -263,9 +263,9 @@ if (isset($_GET['amount']) and $_GET['amount']!=''){
     <div class="tab-pane active" id="tab1">
    <div class="container" style="max-width:769px;">
 <div id="mainform">
-    <h2><a href="http://extourjapan.lakita.vn">Become a Host (Interpreter Guide) Entry Form</a></h2>
+    <h2><a href="/">Become a Host (Interpreter Guide) Entry Form</a></h2>
     <p class="step"><span>1. Enter form</span> → <em>2. Confirmation of input contents</em> → <span>3. send completely</span></p>
-    <form action="http://extourjapan.lakita.vn/host_entry/" method="post">
+    <form action="/" method="post">
         <fieldset>
             <legend> Become a Guest Entry Form</legend>
             <input type="hidden" name="to_step_3" value="yes">

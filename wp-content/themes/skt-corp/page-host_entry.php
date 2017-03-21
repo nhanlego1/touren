@@ -182,7 +182,8 @@
                     foreach ($_POST['c9lr'] as $key => $value) {
                         if ($value != '') $c9lr .= $value;
                     }
-                    $data_post = array('name_guest' => $_POST['t3di_guest'],
+                    $data_post = array(
+                        'name_guest' => $_POST['t3di_guest'],
                         'phone_guest' => $_POST['t0fl_guest'],
                         'email_guest' => $_POST['t9hg_guest'],
                         'code1_guest' => $_POST['t3gq_guest'],
@@ -568,7 +569,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Nickname<em class="required">※</em></th>
+                                    <th>Paypal Account<em class="required">※</em></th>
                                     <td>
                                         <!-- <p>Nickname<em class="required">※</em></p> -->
                                         <input type="text" id="t4kl" name="t4kl" required size="60" value=""
