@@ -2221,3 +2221,34 @@ height: 30px;
   background: rgba(8, 8, 8, 0.8);
 }
 .singlecourse_bottom .singlecourse_price{margin-top: 0px;}
+
+.content-start .rw-left, .content-start .rw-action-area{
+    display: block!important;
+
+}
+#paypalAdaptive{
+    margin-top: 30px;
+}
+#paypalAdaptive .form-item{
+    margin-bottom: 10px;
+}
+#paypalAdaptive .form-item input{
+    width: 60%;
+}
+#paypalAdaptive .form-item label{
+    width: 20%;
+}
+.form-item-submit input{
+    width: 200px;
+
+}
+.form-item-submit{
+    text-align: center;
+    margin-top: 20px;
+}
+.form-paypal-adaptive{
+    display: none;
+    margin-top: 30px;
+}
+.fee_hour{height: 26px}
+.rw-rating-table{display:none}
