@@ -74,7 +74,7 @@
                         <div id="mainform">
                             <p></p>
                             <br/>
-                            <h2 class="text-center"><a href="http://extourjapan.lakita.vn/">Become a Host (Interpreter
+                            <h2 class="text-center"><a href="/">Become a Host (Interpreter
                                     Guide) Entry Form</a></h2>
                             <!-- <p class="step"><em>1. Enter form</em> → <span>2. Confirmation of input contents</span> → <span>3. send completely</span></p> -->
                             <div class="inner-host">

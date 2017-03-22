@@ -10,11 +10,11 @@
  * @package SKT Corp
  */
 
-get_header(); 
+get_header();
  global $post;
-    $post_slug=$post->post_name;
+    $post_slug=$post->post_title;
 ?>
-<?php if ( $post_slug=='tourlist'): 
+<?php if ( $post_slug=='tourlist'):
 //$_SESSION['page_search']='tourlist';
 $f1=$_GET['tour'];
 $f2=$_GET['theme-category'];
@@ -22,7 +22,7 @@ $f3=$_GET['language'];
 ?>
 
 <div class="header1" style="height: 328px; background: url('<?php echo esc_url(home_url('/'));?>img/bannerpage4.jpg');background-size: cover;">
-    <div class="title-top"> 
+    <div class="title-top">
         <h2>Experience Tour & Local activity list</h2>
     </div>
 </div>
@@ -33,22 +33,22 @@ $f3=$_GET['language'];
                     <div class="hr-green-1"></div>
                     <p class="p-tour">Condition search is possible according to purpose</p>
                     <div class="wrapper-step ">
-                        
+
                             <div class="row search-tour">
 
 
                                     <?php $terms1 = get_terms([
                                         'taxonomy' => 'hokkaido-okinawa',
                                         'hide_empty' => false,
-                                    ]); 
+                                    ]);
                                     $terms2 = get_terms([
                                         'taxonomy' => 'theme-category',
                                         'hide_empty' => false,
-                                    ]); 
+                                    ]);
                                     $term3 = get_terms([
                                         'taxonomy' => 'language',
                                         'hide_empty' => false,
-                                    ]); 
+                                    ]);
                                      ?>
                                      <form action="" method="get" class="searchandfilter">
                                         <div class="col-xs-12 col-md-3">
@@ -81,12 +81,12 @@ $f3=$_GET['language'];
 
 
 
-                                    
+
                             </div>
 
 
                         </div>
-                 
+
 
                     <!--section 1-->
                     <div class="hr-green-2"></div>
@@ -103,7 +103,7 @@ $f3=$_GET['language'];
                           <?php endif;?>
                         </ol></div>
                     </div>
-                    
+
                     <div class="article-star">
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="red"> <strong> 5.0 </strong></span><span class="blue"> (Fountain is good value Gunma) </span>
                     </div>
@@ -112,7 +112,7 @@ $f3=$_GET['language'];
                             Tsukiji market whole tour and holding hands
                         </div>
                         <div class="col-xs-12 col-sm-4 text-right">
-                            <!-- <span class="btn-3"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Tsukiji City</span><span class="btn-3"> <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Tsukiji City</span> --> 
+                            <!-- <span class="btn-3"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Tsukiji City</span><span class="btn-3"> <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Tsukiji City</span> -->
                         </div>
                     </div>
                     <div class="margin-top-23">
@@ -122,7 +122,7 @@ $f3=$_GET['language'];
                     <div class="hr-gray"></div>
 
                     <?=SearchTour()?>
-                  
+
                     <p class="blue text-underline"> <span class="glyphicon glyphicon-play red-color" aria-hidden="true"></span> <strong> Full visit to the Tsukiji market (5) </strong></p>
 
 
@@ -144,7 +144,7 @@ $f3=$_GET['language'];
                            Tsukiji market whole tour and holding hands
                         </div>
                         <div class="col-xs-12 col-sm-4 text-right">
-                            <span class="btn-3"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Tsukiji City</span><span class="btn-3"> <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Tsukiji City</span> 
+                            <span class="btn-3"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Tsukiji City</span><span class="btn-3"> <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Tsukiji City</span>
                         </div>
                     </div>
                     <div class="margin-top-23">
@@ -152,11 +152,11 @@ $f3=$_GET['language'];
                         <span class="font-size-12">Tsukiji market whole tour and handful sushi experience tour Full visit to Tsukiji market and sushi experience tour</span>
                     </div>
                     <div class="hr-gray"></div>
-                     <?php $args = array( 
-                        'category_name' => 'tourlist', 
+                     <?php $args = array(
+                        'category_name' => 'tourlist',
                         'orderby'=>'date',
-                        'order'=>'DESC', 
-                        'posts_per_page' => 4, 
+                        'order'=>'DESC',
+                        'posts_per_page' => 4,
                       );
                       $wp_query = new WP_Query();
                       $wp_query->query( $args );?>
@@ -180,7 +180,7 @@ $f3=$_GET['language'];
                         </div>
                         <div class="hr-gray"></div>
                     <?php endwhile; ?>
-                  
+
                     <p class="blue text-underline"> <span class="glyphicon glyphicon-play red-color" aria-hidden="true"></span> <strong> Full visit to the Tsukiji market (5) </strong></p>
 
                 </div>
@@ -190,7 +190,7 @@ $f3=$_GET['language'];
 
 
 
- <?php  
+ <?php
           if(isset($_post['to_step_2']) and $_post['to_step_2']=='yes'){
        ?>
    <div class="container" style="max-width:769px;">
@@ -243,151 +243,227 @@ $f3=$_GET['language'];
 // ]]>
 </script>
 
-<div id="mainform">
-    <h2><a href="http://serve-inc.kir.jp/">ホストになる（通訳ガイド）エントリーフォーム</a></h2>
-    <p class="step"><span>1. フォームの入力</span> → <em>2. 入力内容の確認</em> → <span>3. 送信完了</span></p>
-    <form action="http://serve-inc.kir.jp/esform/guide_entry.php" method="post">
-        <fieldset>
-            <legend>ホストになる（通訳ガイド）エントリーフォーム</legend>
-            <input type="hidden" name="t3di" value="fasdf"><input type="hidden" name="t4kl" value="ニックネーム"><input type="hidden" name="t2wv" value="đasd"><input type="hidden" name="t3gq" value="312"><input type="hidden" name="t0sz" value="1323"><input type="hidden" name="s5bo" value="埼玉県"><input type="hidden" name="t4ii" value="312323"><input type="hidden" name="t0pi" value="31231232"><input type="hidden" name="s6ib" value="西暦"><input type="hidden" name="t2ne" value="1988"><input type="hidden" name="t9ip" value="2"><input type="hidden" name="t3xl" value="2"><input type="hidden" name="t0fl" value="09011112222"><input type="hidden" name="t7pj" value="sdfasdf"><input type="hidden" name="t1og" value="ádfasdf"><input type="hidden" name="t3mp" value="fasdfasdf"><input type="hidden" name="t9hg" value="info@example.com"><input type="hidden" name="t4jy" value="fasdf"><input type="hidden" name="t9ag" value="fasdfsd"><input type="hidden" name="t8nd" value="fasdfdf"><input type="hidden" name="c9oq[]" value="朝早　NG"><input type="hidden" name="c9oq[]" value="夜遅　NG"><input type="hidden" name="t9su" value="fasdfasdf"><input type="hidden" name="s4lu" value="東京都"><input type="hidden" name="s4nx" value="栃木県"><input type="hidden" name="s9pl" value="宮城県"><input type="hidden" name="s6rf" value="北海道"><input type="hidden" name="s9oi" value="北海道"><input type="hidden" name="c9lr[]" value="車（レンタカー）"><input type="hidden" name="t4qr" value="fasdfdf"><input type="hidden" name="f6et" value="Courses.txt"><input type="hidden" name="f6et_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f6et_type" value="text/plain"><input type="hidden" name="t8kg" value="fasdf"><input type="hidden" name="f6rs" value="Courses.txt"><input type="hidden" name="f6rs_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f6rs_type" value="text/plain"><input type="hidden" name="t5ue" value="fasdfdf"><input type="hidden" name="f6hl" value="Courses.txt"><input type="hidden" name="f6hl_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f6hl_type" value="text/plain"><input type="hidden" name="t5wp" value="fasdfdf"><input type="hidden" name="f5ue" value="Courses.txt"><input type="hidden" name="f5ue_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f5ue_type" value="text/plain"><input type="hidden" name="t4gt" value="fasdfdf"><input type="hidden" name="f5vi" value="Courses.txt"><input type="hidden" name="f5vi_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f5vi_type" value="text/plain"><input type="hidden" name="t0zf" value="fasfdf"><input type="hidden" name="f9gp" value="Courses.txt"><input type="hidden" name="f9gp_file" value="123.16.42.87_1481718810.txt"><input type="hidden" name="f9gp_type" value="text/plain"><input type="hidden" name="t8ia" value="fasdfdf"><input type="hidden" name="confirm" value="done"><input type="hidden" name="id" value="2">
-            <table summary="確認内容">
-                <tbody><tr>
-                    <th>お名前<em class="required">※</em></th>
-                    <td>
-                        fasdf                   </td>
-                </tr>
-                <tr>
-                    <th>ニックネーム<em class="required">※</em></th>
-                    <td>
-                        ニックネーム                  </td>
-                </tr>
-                <tr>
-                    <th>名前（ローマ字）</th>
-                    <td>
-                        đasd                    </td>
-                </tr>
-                <tr>
-                    <th>住所<em class="required">※</em></th>
-                    <td>
-                        312-1323<br>
-                        埼玉県<br>
-                        312323<br>
-                        31231232                    </td>
-                </tr>
-                <tr>
-                    <th>生年月日<em class="required">※</em></th>
-                    <td>
-                        西暦1988年2月2日
-                    </td>
-                </tr>
-                <tr>
-                    <th>携帯番号<em class="required">※</em></th>
-                    <td>
-                        09011112222                 </td>
-                </tr>
-                <tr>
-                    <th>対応言語<em class="required">※</em></th>
-                    <td>
-                        sdfasdf                 </td>
-                </tr>
-                <tr>
-                    <th>プロフィール<em class="required">※</em></th>
-                    <td>
-                        ádfasdf<br>
-                        fasdfasdf                   </td>
-                </tr>
-                <tr>
-                    <th>メールアドレス<em class="required">※</em></th>
-                    <td>
-                        info@example.com                    </td>
-                </tr>
-                <tr>
-                    <th>基本ガイド稼働時間<em class="required">※</em></th>
-                    <td>
-                        fasdf                   </td>
-                </tr>
-                <tr>
-                    <th>最低ガイド時間<em class="required">※</em></th>
-                    <td>
-                        fasdfsd                 </td>
-                </tr>
-                <tr>
-                    <th>最低ガイド時間の時給<em class="required">※</em></th>
-                    <td>
-                        fasdfdf                 </td>
-                </tr>
-                <tr>
-                    <th>朝早／夜遅稼働の可否<em class="required">※</em></th>
-                    <td>
-                        朝早　NG, 夜遅　NG                    </td>
-                </tr>
-                <tr>
-                    <th>朝早／夜遅の際の時給</th>
-                    <td>
-                        fasdfasdf                   </td>
-                </tr>
-                <tr>
-                    <th>案内可能エリア<em class="required">※</em></th>
-                    <td>
-                        東京都<br>
-                        栃木県<br>
-                        宮城県<br>
-                        北海道<br>
-                        北海道                 </td>
-                </tr>
-                <tr>
-                    <th>案内時の移動手段<em class="required">※</em></th>
-                    <td>
-                        車（レンタカー）                    </td>
-                </tr>
-                <tr>
-                    <th>現在の職業</th>
-                    <td>
-                        fasdfdf                 </td>
-                </tr>
-                <tr>
-                    <th>お勧めスポット①<em class="required">※</em></th>
-                    <td>
-                        Courses.txt<br>
-                        fasdf<br>
-                        Courses.txt<br>
-                        fasdfdf<br>
-                        Courses.txt<br>
-                        fasdfdf                 </td>
-                </tr>
-                <tr>
-                    <th>お勧めグルメ<em class="required">※</em></th>
-                    <td>
-                        Courses.txt<br>
-                        fasdfdf<br>
-                        Courses.txt<br>
-                        fasfdf<br>
-                        Courses.txt<br>
-                        fasdfdf                 </td>
-                </tr>
-            </tbody></table>
-            <p>
-                <input type="reset" value="やり直す" onclick="history.back();return false;">
-                <input type="submit" value="内容を送信する">
-            </p>
-        </fieldset>
-    </form>
-</div>
+       <div id="mainform">
+           <h2><a href="http://serve-inc.kir.jp/">ホストになる（通訳ガイド）エントリーフォーム</a></h2>
+           <p class="step"><span>1. フォームの入力</span> → <em>2. 入力内容の確認</em> → <span>3. 送信完了</span></p>
+           <form action="http://serve-inc.kir.jp/esform/guide_entry.php" method="post">
+               <fieldset>
+                   <legend>ホストになる（通訳ガイド）エントリーフォーム</legend>
+                   <input type="hidden" name="t3di" value="fasdf"><input type="hidden" name="t4kl" value="ニックネーム"><input
+                       type="hidden" name="t2wv" value="đasd"><input type="hidden" name="t3gq" value="312"><input
+                       type="hidden" name="t0sz" value="1323"><input type="hidden" name="s5bo" value="埼玉県"><input
+                       type="hidden" name="t4ii" value="312323"><input type="hidden" name="t0pi" value="31231232"><input
+                       type="hidden" name="s6ib" value="西暦"><input type="hidden" name="t2ne" value="1988"><input
+                       type="hidden" name="t9ip" value="2"><input type="hidden" name="t3xl" value="2"><input
+                       type="hidden" name="t0fl" value="09011112222"><input type="hidden" name="t7pj"
+                                                                            value="sdfasdf"><input type="hidden"
+                                                                                                   name="t1og"
+                                                                                                   value="ádfasdf"><input
+                       type="hidden" name="t3mp" value="fasdfasdf"><input type="hidden" name="t9hg"
+                                                                          value="info@example.com"><input type="hidden"
+                                                                                                          name="t4jy"
+                                                                                                          value="fasdf"><input
+                       type="hidden" name="t9ag" value="fasdfsd"><input type="hidden" name="t8nd" value="fasdfdf"><input
+                       type="hidden" name="c9oq[]" value="朝早　NG"><input type="hidden" name="c9oq[]" value="夜遅　NG"><input
+                       type="hidden" name="t9su" value="fasdfasdf"><input type="hidden" name="s4lu" value="東京都"><input
+                       type="hidden" name="s4nx" value="栃木県"><input type="hidden" name="s9pl" value="宮城県"><input
+                       type="hidden" name="s6rf" value="北海道"><input type="hidden" name="s9oi" value="北海道"><input
+                       type="hidden" name="c9lr[]" value="車（レンタカー）"><input type="hidden" name="t4qr"
+                                                                           value="fasdfdf"><input type="hidden"
+                                                                                                  name="f6et"
+                                                                                                  value="Courses.txt"><input
+                       type="hidden" name="f6et_file" value="123.16.42.87_1481718810.txt"><input type="hidden"
+                                                                                                 name="f6et_type"
+                                                                                                 value="text/plain"><input
+                       type="hidden" name="t8kg" value="fasdf"><input type="hidden" name="f6rs"
+                                                                      value="Courses.txt"><input type="hidden"
+                                                                                                 name="f6rs_file"
+                                                                                                 value="123.16.42.87_1481718810.txt"><input
+                       type="hidden" name="f6rs_type" value="text/plain"><input type="hidden" name="t5ue"
+                                                                                value="fasdfdf"><input type="hidden"
+                                                                                                       name="f6hl"
+                                                                                                       value="Courses.txt"><input
+                       type="hidden" name="f6hl_file" value="123.16.42.87_1481718810.txt"><input type="hidden"
+                                                                                                 name="f6hl_type"
+                                                                                                 value="text/plain"><input
+                       type="hidden" name="t5wp" value="fasdfdf"><input type="hidden" name="f5ue"
+                                                                        value="Courses.txt"><input type="hidden"
+                                                                                                   name="f5ue_file"
+                                                                                                   value="123.16.42.87_1481718810.txt"><input
+                       type="hidden" name="f5ue_type" value="text/plain"><input type="hidden" name="t4gt"
+                                                                                value="fasdfdf"><input type="hidden"
+                                                                                                       name="f5vi"
+                                                                                                       value="Courses.txt"><input
+                       type="hidden" name="f5vi_file" value="123.16.42.87_1481718810.txt"><input type="hidden"
+                                                                                                 name="f5vi_type"
+                                                                                                 value="text/plain"><input
+                       type="hidden" name="t0zf" value="fasfdf"><input type="hidden" name="f9gp"
+                                                                       value="Courses.txt"><input type="hidden"
+                                                                                                  name="f9gp_file"
+                                                                                                  value="123.16.42.87_1481718810.txt"><input
+                       type="hidden" name="f9gp_type" value="text/plain"><input type="hidden" name="t8ia"
+                                                                                value="fasdfdf"><input type="hidden"
+                                                                                                       name="confirm"
+                                                                                                       value="done"><input
+                       type="hidden" name="id" value="2">
+                   <table summary="確認内容">
+                       <tbody>
+                       <tr>
+                           <th>お名前<em class="required">※</em></th>
+                           <td>
+                               fasdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>ニックネーム<em class="required">※</em></th>
+                           <td>
+                               ニックネーム
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>名前（ローマ字）</th>
+                           <td>
+                               đasd
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>住所<em class="required">※</em></th>
+                           <td>
+                               312-1323<br>
+                               埼玉県<br>
+                               312323<br>
+                               31231232
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>生年月日<em class="required">※</em></th>
+                           <td>
+                               西暦1988年2月2日
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>携帯番号<em class="required">※</em></th>
+                           <td>
+                               09011112222
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>対応言語<em class="required">※</em></th>
+                           <td>
+                               sdfasdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>プロフィール<em class="required">※</em></th>
+                           <td>
+                               ádfasdf<br>
+                               fasdfasdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>メールアドレス<em class="required">※</em></th>
+                           <td>
+                               info@example.com
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>基本ガイド稼働時間<em class="required">※</em></th>
+                           <td>
+                               fasdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>最低ガイド時間<em class="required">※</em></th>
+                           <td>
+                               fasdfsd
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>最低ガイド時間の時給<em class="required">※</em></th>
+                           <td>
+                               fasdfdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>朝早／夜遅稼働の可否<em class="required">※</em></th>
+                           <td>
+                               朝早　NG, 夜遅　NG
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>朝早／夜遅の際の時給</th>
+                           <td>
+                               fasdfasdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>案内可能エリア<em class="required">※</em></th>
+                           <td>
+                               東京都<br>
+                               栃木県<br>
+                               宮城県<br>
+                               北海道<br>
+                               北海道
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>案内時の移動手段<em class="required">※</em></th>
+                           <td>
+                               車（レンタカー）
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>現在の職業</th>
+                           <td>
+                               fasdfdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>お勧めスポット①<em class="required">※</em></th>
+                           <td>
+                               Courses.txt<br>
+                               fasdf<br>
+                               Courses.txt<br>
+                               fasdfdf<br>
+                               Courses.txt<br>
+                               fasdfdf
+                           </td>
+                       </tr>
+                       <tr>
+                           <th>お勧めグルメ<em class="required">※</em></th>
+                           <td>
+                               Courses.txt<br>
+                               fasdfdf<br>
+                               Courses.txt<br>
+                               fasfdf<br>
+                               Courses.txt<br>
+                               fasdfdf
+                           </td>
+                       </tr>
+                       </tbody>
+                   </table>
+                   <p>
+                       <input type="reset" value="やり直す" onclick="history.back();return false;">
+                       <input type="submit" value="内容を送信する">
+                   </p>
+               </fieldset>
+           </form>
+       </div>
 
 
-             <div id="copyright">
-                          <address><a href="http://www.mt312.com/">ES-FORM</a></address>
-                        </div>
-            </div>
-       <?php } else { 
-       ?>
+       <div id="copyright">
+           <address><a href="http://www.mt312.com/">ES-FORM</a></address>
+       </div>
+   </div>
+          <?php } else {
+              ?>
         <div class="header1" style="height:328px;background:url(<?php echo esc_url(home_url('/'));?>img/bg-2.jpg);background-size: cover;">
-	<div class="title-top"> 
+	<div class="title-top">
     <h2><?php if( $post_slug=='question'):?>Q & A<?php else: ?> <?php echo $post_slug;?> <?php endif;?>
 </h2>
   </div>
 </div>
-<div>
+              <div style="width:100%;background: url(../bg-container.jpg);">
 <div class='container' style="">
 <div class='row'>
 <div class="col-md-7 col-xs-12 left-content">
@@ -401,15 +477,15 @@ $f3=$_GET['language'];
                     <?php } ?>
                 <?php endwhile; // end of the loop. ?>
             <!-- blog-post -->
-       
+
         <?php }?>
         </div>
         <?php get_sidebar();?>
         </div>
         </div>
         </div>
-    
+
 <?php endif;?>
-    
+
 <?php get_footer(); ?>
 
