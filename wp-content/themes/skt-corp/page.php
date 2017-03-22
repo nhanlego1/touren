@@ -13,6 +13,7 @@
 get_header();
  global $post;
     $post_slug=$post->post_title;
+$bg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size, $icon );
 ?>
 <?php if ( $post_slug=='tourlist'):
 //$_SESSION['page_search']='tourlist';
@@ -457,7 +458,7 @@ $f3=$_GET['language'];
    </div>
           <?php } else {
               ?>
-        <div class="header1" style="height:328px;background:url(<?php echo esc_url(home_url('/'));?>img/bg-2.jpg);background-size: cover;">
+        <div class="header1" style="height:328px;background:url(<?php if($bg){ echo $bg[0];}else{ echo esc_url(home_url('/')).'/img/bg-2.jpg';}?>);background-size: cover;">
 	<div class="title-top">
     <h2><?php if( $post_slug=='question'):?>Q & A<?php else: ?> <?php echo $post_slug;?> <?php endif;?>
 </h2>
