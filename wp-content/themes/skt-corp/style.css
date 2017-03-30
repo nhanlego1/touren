@@ -1409,6 +1409,7 @@ blockquote {
     float: right;
     font-size: 25px;
     margin-top: 22px;
+    margin-right: -30px;
 }
 .singlecourse_bottom {
     display: inline;

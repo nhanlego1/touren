@@ -17,9 +17,7 @@
                         if (isset($_POST['to_step_3']) and $_POST['to_step_3'] == 'yes') {
                             $step = 3;
                         }
-                        if (isset($_GET['amount']) and $_GET['amount'] != '') {
-                            $step = 4;
-                        }
+
 
                         ?>
                         <?php $args = array(
@@ -47,11 +45,6 @@
                             <li class="<?php if ($step >= 3): ?>completed<?php endif; ?>">
                                 <span class="bubble"><span class="num-step">3</span></span>
                                 <span
-                                    class="title-step"><?php echo get_post_meta(get_the_ID(), 'step3', TRUE); ?></span>
-                            </li>
-                            <li class="<?php if ($step >= 4): ?>completed<?php endif; ?>">
-                                <span class="bubble bubble-last"><span class="num-step num-step-last">4</span></span>
-                                <span
                                     class="title-step"><?php echo get_post_meta(get_the_ID(), 'step4', TRUE); ?></span>
                             </li>
                         <?php endwhile; ?>
@@ -73,7 +66,7 @@
                         <div id="mainform">
                             <p></p>
                             <br/>
-                            <h2 class="text-center"><a href="http://extourjapan.lakita.vn/">TOUR ENTRY FORM</a></h2>
+                            <h2 class="text-center"><a href="/">TOUR ENTRY FORM</a></h2>
                             <!-- <p class="step"><em>1. Enter form</em> → <span>2. Confirmation of input contents</span> → <span>3. send completely</span></p> -->
                             <div class="inner-host">
                                 <?php
@@ -104,19 +97,14 @@
                         </div>
 
                         <?php
-                        if (isset($_GET['amount']) and $_GET['amount'] != ''): ?><?php
-                        $data_get = array('status' => 'yes',
-                            'money_amount' => intval($_GET['amount']));
-                        global $wpdb;
-                        $wpdb->update('tour_reg', $data_get, array('id' => intval($_GET['order_id']))); ?>
+                        if (isset($_POST['to_step_3']) and $_POST['to_step_3'] == 'yes'): ?>
+
                         <section id="contact">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
                                         <div class="title_area">
-                                            <h2 class="title_two">To everyone registered as an interpreter guide
-                                                (host)</h2>
-                                            <span></span><br><br>
+
                                             <div class="title_three">
                                                 <p2>【Notes on Registration】 <br> After matching with the client (guest)
                                                     is actually established after registering on this site, <br> <br>
@@ -141,402 +129,319 @@
                                                 <br>
                                                 <br>
 
-                                                <div id="mainform">
-                                                    <h2><a href="http://extourjapan.lakita.vn/">Become a Host
-                                                            (Interpreter Guide) Entry Form</a></h2>
-                                            <p class="step"><span>1. Enter form</span> → <span>2. Confirmation of input contents</span>
-                                                → <em>3. send completely</em></p>
-                                            <div>
-                                                <ul>
-                                                    <li>I sent an e-mail.</li>
-                                                    <li>Please wait for a while until it is replied.</li>
-                                                    <li>Even if it is December 24 (Saturday) after 1 week, if you do not
-                                                        receive a reply, there is a possibility that it has not arrived,
-                                                        please send again.
-                                                    </li>
-                                                </ul>
+                                            <div id="mainform">
+
+                                                <div>
+                                                    <ul>
+                                                        <li>I sent an e-mail.</li>
+                                                        <li>Please wait for a while until it is replied.</li>
+                                                        <li>Even if it is December 24 (Saturday) after 1 week, if you do
+                                                            not
+                                                            receive a reply, there is a possibility that it has not
+                                                            arrived,
+                                                            please send again.
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
+
+
                                         </div>
-
-
-                                    </div>
-                                    </p></div>
+                                        </p></div>
+                                </div>
                             </div>
                     </div>
-                </div>
-                </section>
-                <?php endif; ?>
-                <?php if (isset($_POST['to_step_3']) and $_POST['to_step_3'] == 'yes'): ?>
-                    <?php
+                    </section>
+                    <?php endif; ?>
+                    <?php if (isset($_POST['to_step_3']) and $_POST['to_step_3'] == 'yes'): ?>
+                        <?php
 
-                    $data_post = array(
-                        'name_guest' => $_POST['t3di_guest'],
-                        'paypal_account' => $_POST['paypal_account'],
-                        'phone_guest' => $_POST['t0fl_guest'],
-                        'email_guest' => $_POST['t9hg_guest'],
-                        'code1_guest' => $_POST['t3gq_guest'],
-                        'code2_guest' => $_POST['t0sz_guest'],
-                        'quan_guest' => $_POST['s5bo_guest'],
-                        'tinh_guest' => $_POST['t4ii_guest'],
-                        'add_guest' => $_POST['t0pi_guest'],
-                        'name_tour' => $_POST['t5nm'],
-                        'topic_tour' => $_POST['c5kv'],
-                        'outline_tour' => $_POST['t0ym'],
-                        'schedule_tour' => $_POST['t1lr'],
-                        'start_tour' => $_POST['t0gb'],
-                        'age_taget' => $_POST['t6en'],
-                        'price_tour' => $_POST['t8sb'],
-                        'include_tour' => $_POST['t3ic'],
-                        'time_need' => $_POST['t2xk'],
-                        'language_tour' => $_POST['t6ki'],
-                        'food' => $_POST['t5gn'],
-                        'pickup' => $_POST['t0fd'],
-                        'holidays' => $_POST['t0mi'],
-                        'minimum_performers' => $_POST['t5lx'],
-                        'notes' => $_POST['t7ex'],
-                        'remarks' => $_POST['t4ti'],
-                        'inquiries' => $_POST['t0zz'],
-                        'person_charge' => $_POST['t8ro'],
-                        'zone1' => $_POST['t5kf'],
-                        'zone2' => $_POST['t3hz'],
-                        'zone3' => $_POST['s0sx'],
-                        'zone4' => $_POST['t4bf'],
-                        'zone5' => $_POST['t1yt'],
-                        'phone_number' => $_POST['t4my'],
-                        'mail_address' => $_POST['t0qm'],
-                        'phone_number2' => $_POST['t4cf'],
-                        'file_zone1' => $_POST['file_f9og'],
-                        'file_zone2' => $_POST['file_f9oe'],
-                        'file_zone3' => $_POST['file_f5iq'],
-                        'file_zone4' => $_POST['file_f6ta'],
-                        'file_zone5' => $_POST['file_f7cv']
-                    );
-                    global $wpdb;
-                    $wpdb->insert('tour_reg', $data_post);
-                    $lastInsertId = $wpdb->insert_id;
-                    ?>
+                        $data_post = array(
+                            'name_guest' => $_POST['t3di_guest'],
+                            'paypal_account' => $_POST['paypal_account'],
+                            'phone_guest' => $_POST['t0fl_guest'],
+                            'email_guest' => $_POST['t9hg_guest'],
+                            'code1_guest' => $_POST['t3gq_guest'],
+                            'code2_guest' => $_POST['t0sz_guest'],
+                            'quan_guest' => $_POST['s5bo_guest'],
+                            'tinh_guest' => $_POST['t4ii_guest'],
+                            'add_guest' => $_POST['t0pi_guest'],
+                            'name_tour' => $_POST['t5nm'],
+                            'topic_tour' => $_POST['c5kv'],
+                            'outline_tour' => $_POST['t0ym'],
+                            'schedule_tour' => $_POST['t1lr'],
+                            'start_tour' => $_POST['t0gb'],
+                            'age_taget' => $_POST['t6en'],
+                            'price_tour' => $_POST['t8sb'],
+                            'include_tour' => $_POST['t3ic'],
+                            'time_need' => $_POST['t2xk'],
+                            'language_tour' => $_POST['t6ki'],
+                            'food' => $_POST['t5gn'],
+                            'pickup' => $_POST['t0fd'],
+                            'holidays' => $_POST['t0mi'],
+                            'minimum_performers' => $_POST['t5lx'],
+                            'notes' => $_POST['t7ex'],
+                            'remarks' => $_POST['t4ti'],
+                            'inquiries' => $_POST['t0zz'],
+                            'person_charge' => $_POST['t8ro'],
+                            'zone1' => $_POST['t5kf'],
+                            'zone2' => $_POST['t3hz'],
+                            'zone3' => $_POST['s0sx'],
+                            'zone4' => $_POST['t4bf'],
+                            'zone5' => $_POST['t1yt'],
+                            'phone_number' => $_POST['t4my'],
+                            'mail_address' => $_POST['t0qm'],
+                            'phone_number2' => $_POST['t4cf'],
+                            'file_zone1' => $_POST['file_f9og'],
+                            'file_zone2' => $_POST['file_f9oe'],
+                            'file_zone3' => $_POST['file_f5iq'],
+                            'file_zone4' => $_POST['file_f6ta'],
+                            'file_zone5' => $_POST['file_f7cv']
+                        );
+                        global $wpdb;
+                        $wpdb->insert('tour_reg', $data_post);
+                        $lastInsertId = $wpdb->insert_id;
+                        ?>
+
+                        <?php endif; ?>
                     <?php
-                    $args = array(
-                        'category_name' => 'config-paypal',
-                        'orderby' => 'date',
-                        'order' => 'DESC',
-                        'posts_per_page' => 1,
-                    );
-                    $wp_query = new WP_Query();
-                    $wp_query->query($args);
-                    while ($wp_query->have_posts()):
-                        $wp_query->the_post();
+                    if (isset($_POST['to_step_2']) and $_POST['to_step_2'] == 'yes'):?><?php
+                        $c5kv = '';
+                        foreach ($_POST['c5kv'] as $key => $value) {
+                            if ($value != '') $c5kv .= $value . " ";
+                        }
+                        require_once(ABSPATH . 'wp-admin/includes/image.php');
+                        require_once(ABSPATH . 'wp-admin/includes/file.php');
+                        require_once(ABSPATH . 'wp-admin/includes/media.php');
+
+                        if ($_FILES['f9og']['name'] != '') $attachment_id = media_handle_upload('f9og', 0); else $attachment_id = null;
+                        if ($_FILES['f9oe']['name'] != '') $attachment_id_1 = media_handle_upload('f9oe', 0); else $attachment_id_1 = null;
+                        if ($_FILES['f5iq']['name'] != '') $attachment_id_2 = media_handle_upload('f5iq', 0); else $attachment_id_2 = null;
+                        if ($_FILES['f6ta']['name'] != '') $attachment_id_3 = media_handle_upload('f6ta', 0); else $attachment_id_3 = null;
+                        if ($_FILES['f7cv']['name'] != '') $attachment_id_4 = media_handle_upload('f7cv', 0); else $attachment_id_4 = null;
 
                         ?>
-                        <form action="<?php echo get_post_meta(get_the_ID(), 'action', TRUE); ?>" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="<?php echo get_post_meta(get_the_ID(), 'cmd', TRUE); ?>">
-                        <input type="hidden" name="business"
-                               value="<?php echo get_post_meta(get_the_ID(), 'business', TRUE); ?>">
-                        <input type="hidden" name="lc" value="<?php echo get_post_meta(get_the_ID(), 'lc', TRUE); ?>">
-                        <input type="hidden" name="item_name" value="By Tour">
-                        <input type="hidden" name="button_subtype"
-                               value="<?php echo get_post_meta(get_the_ID(), 'button_subtype', TRUE); ?>">
-                        <input type="hidden" name="no_note"
-                               value="<?php echo get_post_meta(get_the_ID(), 'no_note', TRUE); ?>">
-                        <input type="hidden" name="currency_code"
-                               value="<?php echo get_post_meta(get_the_ID(), 'currency_code', TRUE); ?>">
-                        <input type="hidden" name="bn" value="<?php echo get_post_meta(get_the_ID(), 'bn', TRUE); ?>">
-                    <?php endwhile; ?>
-                    <table>
-                        <tr>
-                            <td colspan="2" style="text-align:center;">
-                                <input type="hidden" name="on0" value="Package">information
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Name tour</th>
-                            <td>
-                                <?php echo $_POST['t5nm']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Mail address</th>
-                            <td>
-                                <?php echo $_POST['t0qm']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Cellphone number</th>
-                            <td>
-                                <?php echo $_POST['t4my']; ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>money</th>
-                            <td>
-                                <input type="text" name="amount" id="amount" value="">$
-                            </td>
-                        </tr>
-
-                    </table>
-                    <script type="text/javascript">
-                        $('#amount').change(function () {
-                            var order_id = $("#order_id").val();
-                            var amount = $(this).val();
-                            $("#return").val('<?php echo esc_url(home_url('/'));?>tour_entry?order_id=' + order_id + '&amount=' + amount)
-                        });
-                    </script>
-                    <!-- <input type="hidden" name="option_select0" value="Monthly Membership">
-                    <input type="hidden" name="option_amount0" value="10.00">
-                    <input type="hidden" name="option_select1" value="Life Membership">
-                    <input type="hidden" name="option_amount1" value="100.00">
-                    <input type="hidden" name="option_index" value="0">-->
-                    <input type="hidden" name="return" id="return" value="">
-                    <input type="hidden" name="rm" value="2">
-                    <input type="hidden" name="cancel_return" value="<?php echo esc_url(home_url('/')); ?>tryagain">
-                    <input type="hidden" name="page_style" value="TestLocal">
-                    <input type="hidden" name="order_id" id="order_id" value="<?php echo $lastInsertId; ?>">
-                    <div style="width: 100%;
-    height: 150px;
-    text-align: center;
-    margin-top: 15px;">
-                        <input type="image" src="../img/paypal.png" border="0" name="submit"
-                               alt="PayPal - The safer, easier way to pay online!" value="支払う" style="
-    width: 120px;
-    border: none;
-">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
-                             height="1">
-                    </div>
-                    </form>
-                <?php endif; ?>
-                <?php
-                if (isset($_POST['to_step_2']) and $_POST['to_step_2'] == 'yes'):?><?php
-                    $c5kv = '';
-                    foreach ($_POST['c5kv'] as $key => $value) {
-                        if ($value != '') $c5kv .= $value . " ";
-                    }
-                    require_once(ABSPATH . 'wp-admin/includes/image.php');
-                    require_once(ABSPATH . 'wp-admin/includes/file.php');
-                    require_once(ABSPATH . 'wp-admin/includes/media.php');
-
-                    if ($_FILES['f9og']['name'] != '') $attachment_id = media_handle_upload('f9og', 0); else $attachment_id = null;
-                    if ($_FILES['f9oe']['name'] != '') $attachment_id_1 = media_handle_upload('f9oe', 0); else $attachment_id_1 = null;
-                    if ($_FILES['f5iq']['name'] != '') $attachment_id_2 = media_handle_upload('f5iq', 0); else $attachment_id_2 = null;
-                    if ($_FILES['f6ta']['name'] != '') $attachment_id_3 = media_handle_upload('f6ta', 0); else $attachment_id_3 = null;
-                    if ($_FILES['f7cv']['name'] != '') $attachment_id_4 = media_handle_upload('f7cv', 0); else $attachment_id_4 = null;
-
-                    ?>
-                    <form action="<?php echo esc_url(home_url('/')); ?>tour_entry/" method="post">
-                        <fieldset>
-                            <input type="hidden" name="to_step_3" value="yes">
-                            <input type="hidden" name="t3di_guest" value="-">
-                            <input type="hidden" name="t0fl_guest" value="-">
-                            <input type="hidden" name="t9hg_guest" value="-">
-                            <input type="hidden" name="t3gq_guest" value="-">
-                            <input type="hidden" name="t0sz_guest" value="-">
-                            <input type="hidden" name="s5bo_guest" value="-">
-                            <input type="hidden" name="t4ii_guest" value="-">
-                            <input type="hidden" name="t0pi_guest" value="-">
-                            <input type="hidden" name="t5nm" value="<?php echo $_POST['t5nm']; ?>">
-                            <input type="hidden" name="c5kv" value="<?php echo $c5kv; ?>">
-                            <input type="hidden" name="t0ym" value="<?php echo $_POST['t0ym']; ?>">
-                            <input type="hidden" name="t1lr" value="<?php echo $_POST['t1lr']; ?>">
-                            <input type="hidden" name="t0gb" value="<?php echo $_POST['t0gb']; ?>">
-                            <input type="hidden" name="t6en" value="<?php echo $_POST['t6en']; ?>">
-                            <input type="hidden" name="t8sb" value="<?php echo $_POST['t8sb']; ?>">
-                            <input type="hidden" name="t3ic" value="<?php echo $_POST['t3ic']; ?>">
-                            <input type="hidden" name="t2xk" value="<?php echo $_POST['t2xk']; ?>">
-                            <input type="hidden" name="t6ki" value="<?php echo $_POST['t6ki']; ?>">
-                            <input type="hidden" name="t5gn" value="<?php echo $_POST['t5gn']; ?>">
-                            <input type="hidden" name="t0fd" value="<?php echo $_POST['t0fd']; ?>">
-                            <input type="hidden" name="t0mi" value="<?php echo $_POST['t0mi']; ?>">
-                            <input type="hidden" name="t5lx" value="<?php echo $_POST['t5lx']; ?>">
-                            <input type="hidden" name="t7ex" value="<?php echo $_POST['t7ex']; ?>">
-                            <input type="hidden" name="t4ti" value="<?php echo $_POST['t4ti']; ?>">
-                            <input type="hidden" name="t0zz" value="<?php echo $_POST['t0zz']; ?>">
-                            <input type="hidden" name="t8ro" value="<?php echo $_POST['t8ro']; ?>">
-                            <input type="hidden" name="t5kf" value="<?php echo $_POST['t5kf']; ?>">
-                            <input type="hidden" name="t3hz" value="<?php echo $_POST['t3hz']; ?>">
-                            <input type="hidden" name="s0sx" value="<?php echo $_POST['s0sx']; ?>">
-                            <input type="hidden" name="t4bf" value="<?php echo $_POST['t4bf']; ?>">
-                            <input type="hidden" name="t1yt" value="<?php echo $_POST['t1yt']; ?>">
-                            <input type="hidden" name="t4my" value="<?php echo $_POST['t4my']; ?>">
-                            <input type="hidden" name="t0qm" value="<?php echo $_POST['t0qm']; ?>">
-                            <input type="hidden" name="t4cf" value="<?php echo $_POST['t4cf']; ?>">
+                        <form action="<?php echo esc_url(home_url('/')); ?>tour_entry/" method="post">
+                            <fieldset>
+                                <input type="hidden" name="to_step_3" value="yes">
+                                <input type="hidden" name="t3di_guest" value="-">
+                                <input type="hidden" name="t0fl_guest" value="-">
+                                <input type="hidden" name="t9hg_guest" value="-">
+                                <input type="hidden" name="t3gq_guest" value="-">
+                                <input type="hidden" name="t0sz_guest" value="-">
+                                <input type="hidden" name="s5bo_guest" value="-">
+                                <input type="hidden" name="t4ii_guest" value="-">
+                                <input type="hidden" name="t0pi_guest" value="-">
+                                <input type="hidden" name="t5nm" value="<?php echo $_POST['t5nm']; ?>">
+                                <input type="hidden" name="paypal_account" value="<?php echo $_POST['paypal_account']; ?>">
+                                <input type="hidden" name="c5kv" value="<?php echo $c5kv; ?>">
+                                <input type="hidden" name="t0ym" value="<?php echo $_POST['t0ym']; ?>">
+                                <input type="hidden" name="t1lr" value="<?php echo $_POST['t1lr']; ?>">
+                                <input type="hidden" name="t0gb" value="<?php echo $_POST['t0gb']; ?>">
+                                <input type="hidden" name="t6en" value="<?php echo $_POST['t6en']; ?>">
+                                <input type="hidden" name="t8sb" value="<?php echo $_POST['t8sb']; ?>">
+                                <input type="hidden" name="t3ic" value="<?php echo $_POST['t3ic']; ?>">
+                                <input type="hidden" name="t2xk" value="<?php echo $_POST['t2xk']; ?>">
+                                <input type="hidden" name="t6ki" value="<?php echo $_POST['t6ki']; ?>">
+                                <input type="hidden" name="t5gn" value="<?php echo $_POST['t5gn']; ?>">
+                                <input type="hidden" name="t0fd" value="<?php echo $_POST['t0fd']; ?>">
+                                <input type="hidden" name="t0mi" value="<?php echo $_POST['t0mi']; ?>">
+                                <input type="hidden" name="t5lx" value="<?php echo $_POST['t5lx']; ?>">
+                                <input type="hidden" name="t7ex" value="<?php echo $_POST['t7ex']; ?>">
+                                <input type="hidden" name="t4ti" value="<?php echo $_POST['t4ti']; ?>">
+                                <input type="hidden" name="t0zz" value="<?php echo $_POST['t0zz']; ?>">
+                                <input type="hidden" name="t8ro" value="<?php echo $_POST['t8ro']; ?>">
+                                <input type="hidden" name="t5kf" value="<?php echo $_POST['t5kf']; ?>">
+                                <input type="hidden" name="t3hz" value="<?php echo $_POST['t3hz']; ?>">
+                                <input type="hidden" name="s0sx" value="<?php echo $_POST['s0sx']; ?>">
+                                <input type="hidden" name="t4bf" value="<?php echo $_POST['t4bf']; ?>">
+                                <input type="hidden" name="t1yt" value="<?php echo $_POST['t1yt']; ?>">
+                                <input type="hidden" name="t4my" value="<?php echo $_POST['t4my']; ?>">
+                                <input type="hidden" name="t0qm" value="<?php echo $_POST['t0qm']; ?>">
+                                <input type="hidden" name="t4cf" value="<?php echo $_POST['t4cf']; ?>">
 
 
-                            <input type="hidden" name="file_f9og" value="<?php echo $attachment_id; ?>">
-                            <input type="hidden" name="file_f9oe" value="<?php echo $attachment_id_1; ?>">
-                            <input type="hidden" name="file_f5iq" value="<?php echo $attachment_id_2; ?>">
-                            <input type="hidden" name="file_f6ta" value="<?php echo $attachment_id_3; ?>">
-                            <input type="hidden" name="file_f7cv" value="<?php echo $attachment_id_4; ?>">
-                            <br>
-                            <legend>Tour entry ...</legend>
-                            <table summary="Confirmation contents">
-                                <tbody>
-                                <tr>
-                                    <th>Tour title<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t5nm']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Tour theme<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $c5kv; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Tour outline · PR<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0ym']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Tour schedule image<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t1lr']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Point of departure<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0gb']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Target age<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t6en']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Tour fee<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t8sb']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Included in price<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t3ic']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Time required<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t2xk']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Supported languages<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t6ki']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Presence of meals<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t5gn']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Pick up or not<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0fd']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Holidays<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0mi']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Minimum performers<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t5lx']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Notes<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t7ex']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Remarks<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t4ti']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Inquiries
-                                        <Company name
-                                        / Organization name><em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0zz']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Name of person in charge<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t8ro']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Street address<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t5kf']; ?>-<?php echo $_POST['t3hz']; ?><br>
-                                        <?php echo $_POST['s0sx']; ?><br>
-                                        <?php echo $_POST['t4bf']; ?><br>
-                                        <?php echo $_POST['t1yt']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>phone number<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t4my']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>mail address<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t0qm']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Cellphone number<em class="required">※</em></th>
-                                    <td>
-                                        <?php echo $_POST['t4cf']; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Image photo</th>
-                                    <td>
-                                        <?php if ($attachment_id != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id, 'thumbnail')[0] . '"/>'; ?>
-                                        <br>
-                                        <?php if ($attachment_id_1 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_1, 'thumbnail')[0] . '"/>'; ?>
-                                        <br>
-                                        <?php if ($attachment_id_2 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_2, 'thumbnail')[0] . '"/>'; ?>
-                                        <br>
-                                        <?php if ($attachment_id_3 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_3, 'thumbnail')[0] . '"/>'; ?>
-                                        <br>
-                                        <?php if ($attachment_id_4 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_4, 'thumbnail')[0] . '"/>'; ?>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p style="text-align: center;">
-                                <input type="reset" value="Redo" onclick="history.back();return false;">
-                                <input type="submit" value="Send content">
-                            </p>
-                        </fieldset>
-                    </form>
-                <?php endif; ?>
-                <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3']) && !isset($_GET['amount'])): ?>
+                                <input type="hidden" name="file_f9og" value="<?php echo $attachment_id; ?>">
+                                <input type="hidden" name="file_f9oe" value="<?php echo $attachment_id_1; ?>">
+                                <input type="hidden" name="file_f5iq" value="<?php echo $attachment_id_2; ?>">
+                                <input type="hidden" name="file_f6ta" value="<?php echo $attachment_id_3; ?>">
+                                <input type="hidden" name="file_f7cv" value="<?php echo $attachment_id_4; ?>">
+                                <br>
+                                <table summary="Confirmation contents">
+                                    <tbody>
+                                    <tr>
+                                        <th>Tour title<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t5nm']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Paypal Account<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['paypal_account']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour theme<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $c5kv; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour outline · PR<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0ym']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour schedule image<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t1lr']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Point of departure<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0gb']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Target age<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t6en']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour fee<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t8sb']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Included in price<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t3ic']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Time required<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t2xk']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Supported languages<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t6ki']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Presence of meals<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t5gn']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pick up or not<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0fd']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Holidays<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0mi']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Minimum performers<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t5lx']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Notes<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t7ex']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Remarks<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t4ti']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Inquiries
+                                            <Company name
+                                            / Organization name><em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0zz']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name of person in charge<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t8ro']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Street address<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t5kf']; ?>-<?php echo $_POST['t3hz']; ?><br>
+                                            <?php echo $_POST['s0sx']; ?><br>
+                                            <?php echo $_POST['t4bf']; ?><br>
+                                            <?php echo $_POST['t1yt']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>phone number<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t4my']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>mail address<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t0qm']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cellphone number<em class="required">※</em></th>
+                                        <td>
+                                            <?php echo $_POST['t4cf']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Image photo</th>
+                                        <td>
+                                            <?php if ($attachment_id != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id, 'thumbnail')[0] . '"/>'; ?>
+                                            <br>
+                                            <?php if ($attachment_id_1 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_1, 'thumbnail')[0] . '"/>'; ?>
+                                            <br>
+                                            <?php if ($attachment_id_2 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_2, 'thumbnail')[0] . '"/>'; ?>
+                                            <br>
+                                            <?php if ($attachment_id_3 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_3, 'thumbnail')[0] . '"/>'; ?>
+                                            <br>
+                                            <?php if ($attachment_id_4 != null) echo '<img src="' . wp_get_attachment_image_src($attachment_id_4, 'thumbnail')[0] . '"/>'; ?>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p style="text-align: center;">
+                                    <input type="reset" value="Redo" onclick="history.back();return false;">
+                                    <input type="submit" value="Send content">
+                                </p>
+                            </fieldset>
+                        </form>
+                    <?php endif; ?>
+                    <?php if (!isset($_POST['to_step_2']) && !isset($_POST['to_step_3']) && !isset($_GET['amount'])): ?>
 
 
-                    <form action="<?php echo esc_url(home_url('/')); ?>tour_entry/" method="post"
-                          enctype="multipart/form-data" accept-charset="utf-8">
-                        <input type="hidden" name="to_step_2" value="yes">
-                        <fieldset>
-                            <!--<legend>Tour entry...</legend>-->
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <th>Tour title<em class="required">※</em></th>
-                                    <td>
+                        <form action="<?php echo esc_url(home_url('/')); ?>tour_entry/" method="post"
+                              enctype="multipart/form-data" accept-charset="utf-8">
+                            <input type="hidden" name="to_step_2" value="yes">
+                            <fieldset>
+                                <!--<legend>Tour entry...</legend>-->
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>Tour title<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t5nm" required name="t5nm" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Paypal account<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t5nm" required name="t5nm" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Paypal account<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t6nm" required name="paypal_account" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Tour theme<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t6nm" required name="paypal_account" size="60"
+                                                   value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour theme<em class="required">※</em></th>
+                                        <td>
                         
                         <span id="c5kv" class="checkbox">
                             <label for="c5kv0"><input type="checkbox" id="c5kv0" name="c5kv[]"
@@ -550,298 +455,304 @@
                             <label for="c5kv5"><input type="checkbox" id="c5kv5" name="c5kv[]" value="amusement">amusement</label>
                             <label for="c5kv6"><input type="checkbox" id="c5kv6" name="c5kv[]" value="Experience">Experience</label>
                         </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Tour outline· PR<em class="required">※</em></th>
-                                    <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour outline· PR<em class="required">※</em></th>
+                                        <td>
 
-                                        <textarea id="t0ym" required name="t0ym" cols="60" rows="6"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Tour schedule image<em class="required">※</em></th>
-                                    <td>
+                                            <textarea id="t0ym" required name="t0ym" cols="60" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour schedule image<em class="required">※</em></th>
+                                        <td>
 
-                                        <textarea id="t1lr" name="t1lr" required cols="60" rows="6"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Point of departure<em class="required">※</em></th>
-                                    <td>
+                                            <textarea id="t1lr" name="t1lr" required cols="60" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Point of departure<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t0gb" required name="t0gb" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Target age<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t0gb" required name="t0gb" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Target age<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t6en" required name="t6en" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Tour fee<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t6en" required name="t6en" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tour fee<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t8sb" required name="t8sb" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Included in price<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t8sb" required name="t8sb" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Included in price<em class="required">※</em></th>
+                                        <td>
 
-                                        <textarea id="t3ic" required name="t3ic" cols="60" rows="6"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Time required<em class="required">※</em></th>
-                                    <td>
+                                            <textarea id="t3ic" required name="t3ic" cols="60" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Time required<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t2xk" required name="t2xk" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Supported languages<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t2xk" required name="t2xk" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Supported languages<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t6ki" required name="t6ki" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Presence of meals<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t6ki" required name="t6ki" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Presence of meals<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t5gn" required name="t5gn" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Pick up or not<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t5gn" required name="t5gn" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pick up or not<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t0fd" required name="t0fd" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Holidays<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t0fd" required name="t0fd" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Holidays<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t0mi" required name="t0mi" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Minimum performers<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t0mi" required name="t0mi" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Minimum performers<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t5lx" required name="t5lx" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Notes<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t5lx" required name="t5lx" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Notes<em class="required">※</em></th>
+                                        <td>
 
-                                        <textarea id="t7ex" name="t7ex" required cols="60" rows="6"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Remarks<em class="required">※</em></th>
-                                    <td>
+                                            <textarea id="t7ex" name="t7ex" required cols="60" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Remarks<em class="required">※</em></th>
+                                        <td>
 
-                                        <textarea id="t4ti" name="t4ti" required cols="60" rows="6"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Inquiries
-                                        <Company name
-                                        / Organization name><em class="required">※</em></th>
-                                    <td>
+                                            <textarea id="t4ti" name="t4ti" required cols="60" rows="6"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Inquiries
+                                            <Company name
+                                            / Organization name><em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t0zz" required name="t0zz" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Name of person in charge<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t0zz" required name="t0zz" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name of person in charge<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" id="t8ro" required name="t8ro" size="60" value=""
-                                               maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Street address<em class="required">※</em></th>
-                                    <td>
-                                        <span class="lside">Postal code</span><input type="number" id="t5kf" name="t5kf"
-                                                                                     size="3" style="height: 25px;"
-                                                                                     value="" required maxlength="3"
-                                                                                     oninput="maxLengthCheck3(this)"><span
-                                            class="rside">-</span><input type="number" id="t3hz" style="height: 25px;"
-                                                                         name="t3hz" size="4" value="" required
-                                                                         maxlength="4"
-                                                                         oninput="maxLengthCheck4(this)"><br>
-                                        <span class="lside">Prefectures</span><select id="s0sx" required name="s0sx"
-                                                                                      size="1">
-                                            <option value="">----</option>
-                                            <optgroup label="北海道">
-                                                <option value="北海道">北海道</option>
-                                            </optgroup>
-                                            <optgroup label="東北">
-                                                <option value="青森県">青森県</option>
-                                                <option value="岩手県">岩手県</option>
-                                                <option value="宮城県">宮城県</option>
-                                                <option value="秋田県">秋田県</option>
-                                                <option value="山形県">山形県</option>
-                                                <option value="福島県">福島県</option>
-                                            </optgroup>
-                                            <optgroup label="関東">
-                                                <option value="茨城県">茨城県</option>
-                                                <option value="栃木県">栃木県</option>
-                                                <option value="群馬県">群馬県</option>
-                                                <option value="埼玉県">埼玉県</option>
-                                                <option value="千葉県">千葉県</option>
-                                                <option value="東京都">東京都</option>
-                                                <option value="神奈川県">神奈川県</option>
-                                                <option value="山梨県">山梨県</option>
-                                            </optgroup>
-                                            <optgroup label="信越">
-                                                <option value="長野県">長野県</option>
-                                                <option value="新潟県">新潟県</option>
-                                            </optgroup>
-                                            <optgroup label="北陸">
-                                                <option value="富山県">富山県</option>
-                                                <option value="石川県">石川県</option>
-                                                <option value="福井県">福井県</option>
-                                            </optgroup>
-                                            <optgroup label="東海">
-                                                <option value="岐阜県">岐阜県</option>
-                                                <option value="静岡県">静岡県</option>
-                                                <option value="愛知県">愛知県</option>
-                                                <option value="三重県">三重県</option>
-                                            </optgroup>
-                                            <optgroup label="近畿">
-                                                <option value="滋賀県">滋賀県</option>
-                                                <option value="京都府">京都府</option>
-                                                <option value="大阪府">大阪府</option>
-                                                <option value="兵庫県">兵庫県</option>
-                                                <option value="奈良県">奈良県</option>
-                                                <option value="和歌山県">和歌山県</option>
-                                            </optgroup>
-                                            <optgroup label="中国">
-                                                <option value="鳥取県">鳥取県</option>
-                                                <option value="島根県">島根県</option>
-                                                <option value="岡山県">岡山県</option>
-                                                <option value="広島県">広島県</option>
-                                                <option value="山口県">山口県</option>
-                                            </optgroup>
-                                            <optgroup label="四国">
-                                                <option value="徳島県">徳島県</option>
-                                                <option value="香川県">香川県</option>
-                                                <option value="愛媛県">愛媛県</option>
-                                                <option value="高知県">高知県</option>
-                                            </optgroup>
-                                            <optgroup label="九州">
-                                                <option value="福岡県">福岡県</option>
-                                                <option value="佐賀県">佐賀県</option>
-                                                <option value="長崎県">長崎県</option>
-                                                <option value="熊本県">熊本県</option>
-                                                <option value="大分県">大分県</option>
-                                                <option value="宮崎県">宮崎県</option>
-                                                <option value="鹿児島県">鹿児島県</option>
-                                            </optgroup>
-                                            <optgroup label="沖縄県">
-                                                <option value="沖縄県">沖縄県</option>
-                                            </optgroup>
-                                            <optgroup label="海外">
-                                                <option value="海外">海外</option>
-                                            </optgroup>
-                                        </select><br>
-                                        <span class="lside">Municipality</span><input type="text" required id="t4bf"
-                                                                                      name="t4bf" size="60" value=""
-                                                                                      maxlength="300"><br>
-                                        <span class="lside">Street address building</span><input type="text" id="t1yt"
-                                                                                                 name="t1yt" size="60"
-                                                                                                 value="" required
-                                                                                                 maxlength="300">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>phone number<em class="required">※</em></th>
-                                    <td>
+                                            <input type="text" id="t8ro" required name="t8ro" size="60" value=""
+                                                   maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Street address<em class="required">※</em></th>
+                                        <td>
+                                            <span class="lside">Postal code</span><input type="number" id="t5kf"
+                                                                                         name="t5kf"
+                                                                                         size="3" style="height: 25px;"
+                                                                                         value="" required maxlength="3"
+                                                                                         oninput="maxLengthCheck3(this)"><span
+                                                class="rside">-</span><input type="number" id="t3hz"
+                                                                             style="height: 25px;"
+                                                                             name="t3hz" size="4" value="" required
+                                                                             maxlength="4"
+                                                                             oninput="maxLengthCheck4(this)"><br>
+                                            <span class="lside">Prefectures</span><select id="s0sx" required name="s0sx"
+                                                                                          size="1">
+                                                <option value="">----</option>
+                                                <optgroup label="北海道">
+                                                    <option value="北海道">北海道</option>
+                                                </optgroup>
+                                                <optgroup label="東北">
+                                                    <option value="青森県">青森県</option>
+                                                    <option value="岩手県">岩手県</option>
+                                                    <option value="宮城県">宮城県</option>
+                                                    <option value="秋田県">秋田県</option>
+                                                    <option value="山形県">山形県</option>
+                                                    <option value="福島県">福島県</option>
+                                                </optgroup>
+                                                <optgroup label="関東">
+                                                    <option value="茨城県">茨城県</option>
+                                                    <option value="栃木県">栃木県</option>
+                                                    <option value="群馬県">群馬県</option>
+                                                    <option value="埼玉県">埼玉県</option>
+                                                    <option value="千葉県">千葉県</option>
+                                                    <option value="東京都">東京都</option>
+                                                    <option value="神奈川県">神奈川県</option>
+                                                    <option value="山梨県">山梨県</option>
+                                                </optgroup>
+                                                <optgroup label="信越">
+                                                    <option value="長野県">長野県</option>
+                                                    <option value="新潟県">新潟県</option>
+                                                </optgroup>
+                                                <optgroup label="北陸">
+                                                    <option value="富山県">富山県</option>
+                                                    <option value="石川県">石川県</option>
+                                                    <option value="福井県">福井県</option>
+                                                </optgroup>
+                                                <optgroup label="東海">
+                                                    <option value="岐阜県">岐阜県</option>
+                                                    <option value="静岡県">静岡県</option>
+                                                    <option value="愛知県">愛知県</option>
+                                                    <option value="三重県">三重県</option>
+                                                </optgroup>
+                                                <optgroup label="近畿">
+                                                    <option value="滋賀県">滋賀県</option>
+                                                    <option value="京都府">京都府</option>
+                                                    <option value="大阪府">大阪府</option>
+                                                    <option value="兵庫県">兵庫県</option>
+                                                    <option value="奈良県">奈良県</option>
+                                                    <option value="和歌山県">和歌山県</option>
+                                                </optgroup>
+                                                <optgroup label="中国">
+                                                    <option value="鳥取県">鳥取県</option>
+                                                    <option value="島根県">島根県</option>
+                                                    <option value="岡山県">岡山県</option>
+                                                    <option value="広島県">広島県</option>
+                                                    <option value="山口県">山口県</option>
+                                                </optgroup>
+                                                <optgroup label="四国">
+                                                    <option value="徳島県">徳島県</option>
+                                                    <option value="香川県">香川県</option>
+                                                    <option value="愛媛県">愛媛県</option>
+                                                    <option value="高知県">高知県</option>
+                                                </optgroup>
+                                                <optgroup label="九州">
+                                                    <option value="福岡県">福岡県</option>
+                                                    <option value="佐賀県">佐賀県</option>
+                                                    <option value="長崎県">長崎県</option>
+                                                    <option value="熊本県">熊本県</option>
+                                                    <option value="大分県">大分県</option>
+                                                    <option value="宮崎県">宮崎県</option>
+                                                    <option value="鹿児島県">鹿児島県</option>
+                                                </optgroup>
+                                                <optgroup label="沖縄県">
+                                                    <option value="沖縄県">沖縄県</option>
+                                                </optgroup>
+                                                <optgroup label="海外">
+                                                    <option value="海外">海外</option>
+                                                </optgroup>
+                                            </select><br>
+                                            <span class="lside">Municipality</span><input type="text" required id="t4bf"
+                                                                                          name="t4bf" size="60" value=""
+                                                                                          maxlength="300"><br>
+                                            <span class="lside">Street address building</span><input type="text"
+                                                                                                     id="t1yt"
+                                                                                                     name="t1yt"
+                                                                                                     size="60"
+                                                                                                     value="" required
+                                                                                                     maxlength="300">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>phone number<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="number" required id="t4my" name="t4my" size="60" value=""
-                                               oninput="maxLengthCheck12(this)" maxlength="12"><br>
-                                        <span class="bside">No hyphen required</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>mail address<em class="required">※</em></th>
-                                    <td>
+                                            <input type="number" required id="t4my" name="t4my" size="60" value=""
+                                                   oninput="maxLengthCheck12(this)" maxlength="12"><br>
+                                            <span class="bside">No hyphen required</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>mail address<em class="required">※</em></th>
+                                        <td>
 
-                                        <input type="text" required id="t0qm" name="t0qm" size="60" value=""
-                                               maxlength="300"><br>
-                                        <span class="bside">example： info@example.com</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Cellphone number<em class="required">※</em></th>
-                                    <td>
-                                        <input type="number" required style="height: 25px;" id="t4cf" name="t4cf"
-                                               size="60" value="" maxlength="11" oninput="maxLengthCheck12(this)"><br>
-                                        <span class="bside">example： 09011112222 (No hyphen required)</span>
-                                    </td>
-                                </tr>
-                                <script>function maxLengthCheck12(object) {
-                                        if (object.value.length > object.maxLength)
-                                            object.value = object.value.slice(0, object.maxLength)
-                                    }
-                                    function maxLengthCheck3(object) {
-                                        if (object.value.length > object.maxLength)
-                                            object.value = object.value.slice(0, object.maxLength)
-                                    }
-                                    function maxLengthCheck4(object) {
-                                        if (object.value.length > object.maxLength)
-                                            object.value = object.value.slice(0, object.maxLength)
-                                    }
-                                </script>
-                                <tr>
-                                    <th>Image photo</th>
-                                    <td>
-                                        <input type="file" id="f9og" name="f9og" size="60"><br>
-                                        <input type="file" id="f9oe" name="f9oe" size="60"><br>
-                                        <input type="file" id="f5iq" name="f5iq" size="60"><br>
-                                        <input type="file" id="f6ta" name="f6ta" size="60"><br>
-                                        <input type="file" id="f7cv" name="f7cv" size="60">
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="submit_bt_wrap">
-                                <input type="reset" value="Redo"><input type="submit" value="To confirmation screen">
-                            </p>
-                        </fieldset>
-                    </form>
-                <?php endif; ?>
-                <p class="back">
-                    <a href="#" onclick="history.back();return false;">← Back</a><br/>
-                    <a href="#">↑ To the top of the page</a>
-                </p>
+                                            <input type="text" required id="t0qm" name="t0qm" size="60" value=""
+                                                   maxlength="300"><br>
+                                            <span class="bside">example： info@example.com</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cellphone number<em class="required">※</em></th>
+                                        <td>
+                                            <input type="number" required style="height: 25px;" id="t4cf" name="t4cf"
+                                                   size="60" value="" maxlength="11"
+                                                   oninput="maxLengthCheck12(this)"><br>
+                                            <span class="bside">example： 09011112222 (No hyphen required)</span>
+                                        </td>
+                                    </tr>
+                                    <script>function maxLengthCheck12(object) {
+                                            if (object.value.length > object.maxLength)
+                                                object.value = object.value.slice(0, object.maxLength)
+                                        }
+                                        function maxLengthCheck3(object) {
+                                            if (object.value.length > object.maxLength)
+                                                object.value = object.value.slice(0, object.maxLength)
+                                        }
+                                        function maxLengthCheck4(object) {
+                                            if (object.value.length > object.maxLength)
+                                                object.value = object.value.slice(0, object.maxLength)
+                                        }
+                                    </script>
+                                    <tr>
+                                        <th>Image photo</th>
+                                        <td>
+                                            <input type="file" id="f9og" name="f9og" size="60"><br>
+                                            <input type="file" id="f9oe" name="f9oe" size="60"><br>
+                                            <input type="file" id="f5iq" name="f5iq" size="60"><br>
+                                            <input type="file" id="f6ta" name="f6ta" size="60"><br>
+                                            <input type="file" id="f7cv" name="f7cv" size="60">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="submit_bt_wrap">
+                                    <input type="reset" value="Redo"><input type="submit"
+                                                                            value="To confirmation screen">
+                                </p>
+                            </fieldset>
+                        </form>
+                    <?php endif; ?>
+                    <p class="back">
+                        <a href="#" onclick="history.back();return false;">← Back</a><br/>
+                        <a href="#">↑ To the top of the page</a>
+                    </p>
+                </div>
+                <!-- end mainform -->
+
+
             </div>
-            <!-- end mainform -->
-
+            <!-- end container -->
 
         </div>
-        <!-- end container -->
-
-    </div>
 
     </div>
     </div>

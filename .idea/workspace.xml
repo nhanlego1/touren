@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f07b2bda-4aeb-4a5a-afc7-fcf9047941b9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
     </list>
     <ignored path="touren.iws" />
@@ -23,55 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="2269" column="33" selection-start-line="2269" selection-start-column="33" selection-end-line="2269" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6135">
-              <caret line="418" column="40" selection-start-line="418" selection-start-column="38" selection-end-line="418" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="455" column="73" selection-start-line="455" selection-start-column="73" selection-end-line="455" selection-end-column="73" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5130">
-              <caret line="346" column="73" selection-start-line="346" selection-start-column="73" selection-end-line="346" selection-end-column="73" />
-              <folding>
-                <marker date="1490115834000" expanded="true" signature="3924:3940" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-load.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-load.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="1411" column="24" selection-start-line="1411" selection-start-column="24" selection-end-line="1411" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -80,38 +43,142 @@
       <file leaf-file-name="page-host_entry.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
+            <state relative-caret-position="186">
+              <caret line="215" column="35" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="35" />
+              <folding>
+                <marker date="1490882456000" expanded="true" signature="12962:14880" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="12998:13377" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13031:13340" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13088:13127" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13128:13306" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13132:13268" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13138:13263" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13144:13237" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13413:14847" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13446:13871" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13904:13953" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13904:13954" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="13904:14226" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14259:14500" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14296:14328" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14365:14397" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14434:14466" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14533:14810" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14582:14614" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14663:14695" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14744:14776" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="14967:16611" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15003:15379" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15036:15342" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15093:15132" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15133:15308" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15137:15270" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15143:15265" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15149:15239" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15415:16578" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15448:15876" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="15909:16255" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16288:16541" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16337:16369" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16698:19148" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16736:19115" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16793:16921" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16793:16923" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="16793:16988" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17021:17156" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17021:17157" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17021:17227" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17260:17460" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17493:17625" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17493:17709" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17742:17929" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="17962:18160" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="18193:18443" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="18327:18409" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="18476:18656" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="18689:18863" ph="..." />
+                <marker date="1490882456000" expanded="true" signature="18896:19078" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
+              <folding>
+                <marker date="1490727849000" expanded="true" signature="2293:2397" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="2409:2560" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="2429:2548" ph="{...}" />
+                <marker date="1490727849000" expanded="true" signature="2611:2637" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="2638:3401" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="2645:3401" ph="..." />
+                <marker date="1490727849000" expanded="false" signature="2663:2693" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="2694:3389" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="3440:3463" ph="SELECT * FRO... host_reg" />
+                <marker date="1490727849000" expanded="false" signature="6147:6163" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="6641:6745" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="6752:6903" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="6772:6891" ph="{...}" />
+                <marker date="1490727849000" expanded="true" signature="6954:6980" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="6981:7965" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="6988:7965" ph="..." />
+                <marker date="1490727849000" expanded="false" signature="7006:7036" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="7037:7947" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="7951:7957" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="8002:8025" ph="SELECT * FRO... tour_reg" />
+                <marker date="1490727849000" expanded="false" signature="9918:9934" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10318:10423" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10430:10581" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10450:10569" ph="{...}" />
+                <marker date="1490727849000" expanded="true" signature="10632:10658" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10659:11650" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10666:11650" ph="..." />
+                <marker date="1490727849000" expanded="false" signature="10684:10714" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="10715:11638" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="11687:11711" ph="SELECT * FRO... house_reg" />
+                <marker date="1490727849000" expanded="false" signature="14918:14934" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="33193:33408" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="33263:33377" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="39127:39190" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="39236:39302" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="39356:39428" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="39675:39788" ph="..." />
+                <marker date="1490727849000" expanded="true" signature="42341:42406" ph="SELECT * FRO... tour_postmeta" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2775">
+              <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-tour_entry.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2595">
-              <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
-              <folding />
+            <state relative-caret-position="495">
+              <caret line="299" column="20" selection-start-line="291" selection-start-column="12" selection-end-line="299" selection-end-column="20" />
+              <folding>
+                <marker date="1490726544000" expanded="true" signature="3992:4008" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-guest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-guest.php">
+      <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content-page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3855">
-              <caret line="267" column="19" selection-start-line="267" selection-start-column="19" selection-end-line="267" selection-end-column="19" />
+            <state relative-caret-position="201">
+              <caret line="387" column="29" selection-start-line="387" selection-start-column="29" selection-end-line="387" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -136,19 +203,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tourlists.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/sidebar.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/js/custom.js" />
         <option value="$PROJECT_DIR$/adaptivepayments/samples/Configuration.php" />
         <option value="$PROJECT_DIR$/adaptivepayments/samples/PayReceipt.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php" />
       </list>
     </option>
   </component>
@@ -189,6 +257,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -261,54 +330,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touren" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="touren" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paypaladaptivepayment" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tourjapan" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
@@ -377,21 +405,25 @@
       <updated>1487950102424</updated>
       <workItem from="1487950103702" duration="574000" />
       <workItem from="1489852819977" duration="25635000" />
-      <workItem from="1490191295275" duration="528000" />
+      <workItem from="1490191295275" duration="1109000" />
+      <workItem from="1490583504246" duration="3701000" />
+      <workItem from="1490680023983" duration="180000" />
+      <workItem from="1490707002173" duration="14298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26737000" />
+    <option name="totallyTimeSpent" value="45497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -402,7 +434,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -423,38 +454,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33915">
-          <caret line="2261" column="17" selection-start-line="2261" selection-start-column="17" selection-end-line="2261" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6135">
-          <caret line="418" column="40" selection-start-line="418" selection-start-column="38" selection-end-line="418" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5130">
           <caret line="346" column="73" selection-start-line="346" selection-start-column="73" selection-end-line="346" selection-end-column="73" />
           <folding>
-            <marker date="1490115834000" expanded="true" signature="3924:3940" ph="..." />
+            <marker date="1490726544000" expanded="true" signature="3992:4008" ph="..." />
           </folding>
         </state>
       </provider>
@@ -463,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +475,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
-          <folding />
+          <folding>
+            <marker date="1490882456000" expanded="true" signature="12962:14880" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="12998:13377" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13031:13340" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13088:13127" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13128:13306" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13132:13268" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13138:13263" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13144:13237" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13413:14847" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13446:13871" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13953" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13954" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:14226" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14259:14500" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14296:14328" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14365:14397" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14434:14466" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14533:14810" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14582:14614" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14663:14695" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14744:14776" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14967:16611" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15003:15379" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15036:15342" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15093:15132" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15133:15308" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15137:15270" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15143:15265" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15149:15239" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15415:16578" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15448:15876" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15909:16255" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16288:16541" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16337:16369" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16698:19148" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16736:19115" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16921" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16923" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16988" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17156" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17157" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17227" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17260:17460" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17625" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17709" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17742:17929" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17962:18160" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18193:18443" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18327:18409" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18476:18656" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18689:18863" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18896:19078" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -487,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,7 +559,136 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33915">
+          <caret line="2261" column="17" selection-start-line="2261" selection-start-column="17" selection-end-line="2261" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6135">
+          <caret line="418" column="40" selection-start-line="418" selection-start-column="38" selection-end-line="418" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5130">
+          <caret line="346" column="73" selection-start-line="346" selection-start-column="73" selection-end-line="346" selection-end-column="73" />
+          <folding>
+            <marker date="1490726544000" expanded="true" signature="3992:4008" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
+          <folding>
+            <marker date="1490882456000" expanded="true" signature="12962:14880" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="12998:13377" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13031:13340" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13088:13127" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13128:13306" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13132:13268" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13138:13263" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13144:13237" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13413:14847" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13446:13871" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13953" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13954" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:14226" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14259:14500" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14296:14328" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14365:14397" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14434:14466" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14533:14810" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14582:14614" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14663:14695" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14744:14776" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14967:16611" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15003:15379" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15036:15342" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15093:15132" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15133:15308" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15137:15270" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15143:15265" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15149:15239" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15415:16578" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15448:15876" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15909:16255" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16288:16541" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16337:16369" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16698:19148" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16736:19115" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16921" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16923" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16988" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17156" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17157" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17227" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17260:17460" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17625" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17709" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17742:17929" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17962:18160" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18193:18443" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18327:18409" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18476:18656" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18689:18863" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18896:19078" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2595">
+          <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-guest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3855">
+          <caret line="267" column="19" selection-start-line="267" selection-start-column="19" selection-end-line="267" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tourlists.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -541,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="43" column="18" selection-start-line="10" selection-start-column="8" selection-end-line="43" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -557,10 +741,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1408">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding>
-              <marker date="1488182898000" expanded="true" signature="1683:1798" ph="{&quot;name&quot;: &quot;me/shopping-cart-app&quot;...}" />
-              <marker date="1488182898000" expanded="true" signature="1736:1796" ph="{&quot;paypal/adaptivepayments-sdk-php&quot;: &quot;v3.6.106&quot;...}" />
-            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -633,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13556">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,10 +836,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-blog-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-guest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7363">
+          <caret line="235" column="73" selection-start-line="235" selection-start-column="73" selection-end-line="235" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/content-single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="1411" column="24" selection-start-line="1411" selection-start-column="24" selection-end-line="1411" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tourlists.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="194" column="18" selection-start-line="194" selection-start-column="18" selection-end-line="194" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="387" column="29" selection-start-line="387" selection-start-column="29" selection-end-line="387" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-includes/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="3437" column="23" selection-start-line="3437" selection-start-column="9" selection-end-line="3437" selection-end-column="23" />
+        <state relative-caret-position="203">
+          <caret line="1659" column="22" selection-start-line="1659" selection-start-column="9" selection-end-line="1659" selection-end-column="22" />
           <folding>
             <marker date="1487234822000" expanded="true" signature="53025:53041" ph="Insert into post... " />
             <marker date="1487234822000" expanded="true" signature="53051:53067" ph="Insert into page... " />
@@ -699,101 +962,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-blog-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-load.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5130">
-          <caret line="346" column="73" selection-start-line="346" selection-start-column="73" selection-end-line="346" selection-end-column="73" />
-          <folding>
-            <marker date="1490115834000" expanded="true" signature="3924:3940" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tour_entry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2595">
-          <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-guest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/content-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3855">
-          <caret line="267" column="19" selection-start-line="267" selection-start-column="19" selection-end-line="267" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6135">
-          <caret line="418" column="40" selection-start-line="418" selection-start-column="38" selection-end-line="418" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-tourlists.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
+        <state relative-caret-position="180">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="6453">
           <caret line="455" column="73" selection-start-line="455" selection-start-column="73" selection-end-line="455" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1490727849000" expanded="true" signature="2293:2397" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="2409:2560" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="2429:2548" ph="{...}" />
+            <marker date="1490727849000" expanded="true" signature="2611:2637" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="2638:3401" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="2645:3401" ph="..." />
+            <marker date="1490727849000" expanded="false" signature="2663:2693" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="2694:3389" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="3440:3463" ph="SELECT * FRO... host_reg" />
+            <marker date="1490727849000" expanded="false" signature="6147:6163" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="6641:6745" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="6752:6903" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="6772:6891" ph="{...}" />
+            <marker date="1490727849000" expanded="true" signature="6954:6980" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="6981:7965" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="6988:7965" ph="..." />
+            <marker date="1490727849000" expanded="false" signature="7006:7036" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="7037:7947" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="7951:7957" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="8002:8025" ph="SELECT * FRO... tour_reg" />
+            <marker date="1490727849000" expanded="false" signature="9918:9934" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10318:10423" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10430:10581" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10450:10569" ph="{...}" />
+            <marker date="1490727849000" expanded="true" signature="10632:10658" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10659:11650" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10666:11650" ph="..." />
+            <marker date="1490727849000" expanded="false" signature="10684:10714" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="10715:11638" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="11687:11711" ph="SELECT * FRO... house_reg" />
+            <marker date="1490727849000" expanded="false" signature="14918:14934" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="33193:33408" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="33263:33377" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="39127:39190" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="39236:39302" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="39356:39428" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="39675:39788" ph="..." />
+            <marker date="1490727849000" expanded="true" signature="42341:42406" ph="SELECT * FRO... tour_postmeta" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/style.css">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/page-host_entry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="2269" column="33" selection-start-line="2269" selection-start-column="33" selection-end-line="2269" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="186">
+          <caret line="215" column="35" selection-start-line="215" selection-start-column="24" selection-end-line="215" selection-end-column="35" />
+          <folding>
+            <marker date="1490882456000" expanded="true" signature="12962:14880" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="12998:13377" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13031:13340" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13088:13127" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13128:13306" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13132:13268" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13138:13263" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13144:13237" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13413:14847" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13446:13871" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13953" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:13954" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="13904:14226" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14259:14500" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14296:14328" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14365:14397" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14434:14466" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14533:14810" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14582:14614" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14663:14695" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14744:14776" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="14967:16611" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15003:15379" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15036:15342" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15093:15132" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15133:15308" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15137:15270" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15143:15265" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15149:15239" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15415:16578" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15448:15876" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="15909:16255" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16288:16541" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16337:16369" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16698:19148" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16736:19115" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16921" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16923" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="16793:16988" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17156" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17157" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17021:17227" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17260:17460" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17625" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17493:17709" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17742:17929" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="17962:18160" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18193:18443" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18327:18409" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18476:18656" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18689:18863" ph="..." />
+            <marker date="1490882456000" expanded="true" signature="18896:19078" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/skt-corp/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="299" column="20" selection-start-line="291" selection-start-column="12" selection-end-line="299" selection-end-column="20" />
+          <folding>
+            <marker date="1490726544000" expanded="true" signature="3992:4008" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

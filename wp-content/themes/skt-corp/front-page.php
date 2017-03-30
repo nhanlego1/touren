@@ -314,6 +314,7 @@ get_header();
                 <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
 
+
                         <?php
                         $count = 0;
                         $args = array(
@@ -326,218 +327,243 @@ get_header();
 
                         $wp_query = new WP_Query();
                         $wp_query->query($args);
+                        $class = '';
                         while ($wp_query->have_posts()) {
                             $wp_query->the_post();
-                            $count++; ?>
-                            <?php if ($count == 1): ?>
+                            ?>
+                            <?php if ($count == 0): ?>
                                 <div class="item active">
                                 <div class="row">
                             <?php endif ?>
-                            <?php if ($count >= 1 && $count < 5): ?>
+                            <?php if ($count >= 0 && $count < 4): ?>
                                 <div class="col-xs-12 col-sm-6 col-md-3">
                                     <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
                                                 class="host-img"
                                                 src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
                                     </div>
+                                    <p class="host-name"><?php echo get_post_meta($post->ID, 'host_tour_name', TRUE) ?></p>
+                                    <p class="host-salary">＄<?php echo get_post_meta($post->ID, 'price', TRUE) ?>
+                                        /Per
+                                        One Hour</p>
+                                    <div class="host-desc">
+                                        <p>Area : <?php echo get_post_meta($post->ID, 'guide_area', TRUE) ?></p>
+                                        <p>
+                                            Laungage：<?php echo get_post_meta($post->ID, 'host_tour_language', TRUE) ?></p>
+                                        <p>
+                                            Transportation：<?php echo get_post_meta($post->ID, 'transportration', TRUE) ?></p>
+                                        <p><?php echo get_post_meta($post->ID, 'early_time', TRUE) ?></p>
 
-                                    <?php the_content(); ?>
-                                </div>
-                            <?php endif ?>
-                            <?php if ($count == 5): ?>
-                                </div>
-                                </div>
-                                <div class="item">
-                                <div class="row">
-                            <?php endif ?>
-                            <?php if ($count >= 5 && $count <= 8): ?>
-                                <div class="col-xs-12 col-sm-6 col-md-3">
-                                    <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
-                                                class="host-img"
-                                                src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
                                     </div>
-
-                                    <?php the_content(); ?>
                                 </div>
-                            <?php endif ?>
-                            <?php if ($count == 8): ?>
-                                </div>
-                                </div>
-                            <?php endif ?>
-
-
-                        <?php } ?>
-
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#carousel-example-generic1" data-slide="prev"><span
-                        class="sr-only">Previous</span><img class="left-arr hidden-xs hidden-sm" src="left-arr.png"/>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic1" data-slide="next"> <span
-                        class="sr-only">Next</span> <img class="right-arr hidden-xs hidden-sm" src="right-arr.png"/></a>
-
-            </div>
-        </div>
-
-        <div class="host row newTour">
-            <div class="our-service">
-                <p class="service">NEWツアー/アクティビティーのご紹介<span class="lines"></span></p>
-                <p></p></div>
-            <div class="container list-host">
-                <div id="newTour" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <?php
-                        $count = 0;
-                        $args = array(
-                            'category_name' => 'tourlist',
-                            'orderby' => 'date',
-                            'order' => 'DESC',
-                            'posts_per_page' => 6,
-                        );
-
-
-                        $wp_query = new WP_Query();
-                        $wp_query->query($args);
-                        while ($wp_query->have_posts()) {
-                            $wp_query->the_post();
-                            $count++; ?>
-                            <?php if ($count == 1): ?>
-                                <div class="item active">
-                                <div class="row">
-                            <?php endif ?>
-                            <?php if ($count >= 1 && $count < 4): ?>
-                                <div class="col-xs-12 col-sm-6 col-md-4">
-                                    <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
-                                                class="host-img" src="<?php the_post_thumbnail_url() ?>"/></a>
-                                    </div>
-                                    <p class="host-name"><?php the_title(); ?></p>
-                                    <?php the_content(); ?>
-                                </div>
-                            <?php endif ?>
+                            <?php endif; ?>
                             <?php if ($count == 4): ?>
                                 </div>
                                 </div>
                                 <div class="item">
                                 <div class="row">
                             <?php endif ?>
-                            <?php if ($count >= 4 && $count <= 6): ?>
-                                <div class="col-xs-12 col-sm-6 col-md-4">
+                            <?php if ($count >= 4 && $count <= 8): ?>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
                                     <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
-                                                class="host-img" src="<?php the_post_thumbnail_url() ?>"/></a>
+                                                class="host-img"
+                                                src="<?php the_post_thumbnail_url() ?>"/></a><span><strong><?php the_title(); ?> </strong></span>
                                     </div>
-                                    <p class="host-name"><?php the_title(); ?></p>
-                                    <?php the_content(); ?>
+                                    <p class="host-name"><?php echo get_post_meta($post->ID, 'host_tour_name', TRUE) ?></p>
+                                    <p class="host-salary">＄<?php echo get_post_meta($post->ID, 'price', TRUE) ?>
+                                        /Per
+                                        One Hour</p>
+                                    <div class="host-desc">
+                                        <p>Area : <?php echo get_post_meta($post->ID, 'guide_area', TRUE) ?></p>
+                                        <p>
+                                            Laungage：<?php echo get_post_meta($post->ID, 'host_tour_language', TRUE) ?></p>
+                                        <p>
+                                            Transportation：<?php echo get_post_meta($post->ID, 'transportration', TRUE) ?></p>
+                                        <p><?php echo get_post_meta($post->ID, 'early_time', TRUE) ?></p>
+
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($count == 8): ?>
+                                </div>
                                 </div>
                             <?php endif ?>
-                            <?php if ($count == 6): ?>
-                                </div>
-                                </div>
-                            <?php endif ?>
-
-
-                        <?php } ?>
-
-
-                        <p></p></div>
-                    <p></p></div>
-                <p></p></div>
-            <p><a class="left carousel-control" href="#newTour" data-slide="prev"><span class="sr-only">Previous</span><img
-                        class="left-arr hidden-xs hidden-sm" src="left-arr.png"> </a><br>
-                <a class="right carousel-control" href="#newTour" data-slide="next"> <span class="sr-only">Next</span> <img
-                        class="right-arr hidden-xs hidden-sm" src="right-arr.png"></a></p></div>
-    </div>
-
-        <div class="row testimonial">
-            <div class="our-service margin-top-25">
-                <p class="service">testimonial <span class="lines"></span></p>
-
-            </div>
-            <div class="container">
-
-                <?php
-                $count = 0;
-                $args = array(
-                    'category_name' => 'testimonial',
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'posts_per_page' => 4,
-                );
-
-
-                $wp_query = new WP_Query();
-                $wp_query->query($args);
-                while ($wp_query->have_posts()) {
-                    $wp_query->the_post();
-                    $count++; ?>
-                    <?php if ($count == 1): ?>
-
-                        <div class="row">
-                    <?php endif ?>
-                    <?php if ($count >= 1 && $count <= 2): ?>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="row">
-                                <div class="col-xs-3"><img class="img-responsive"
-                                                           src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>"/>
-                                </div>
-                                <div class="col-xs-9">
-                                    <p class="testimonial-name"><?php the_title(); ?></p>
-                                    <p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
-
-                                    <div class="hr"></div>
-                                    <div class="row">
-                                        <div class="col-xs-2"><img class="img-responsive" src="quote.png"/></div>
-                                        <div class="col-xs-10 testimonial-content">
-                                            <?php the_content(); ?>
-                                            <p class="ps text-right">Published
-                                                on：<?php echo get_the_date('d/m/Y'); ?></p>
-                                            <p class="sign text-right"><a
-                                                    href="<?php echo get_permalink(get_the_ID()); ?> "
-                                                    style="color: #a60101;">Recruitment Details</a></p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif ?>
-                    <?php if ($count == 2): ?>
-                        </div>
-                        <div class="row">
-                    <?php endif ?>
-                    <?php if ($count >= 3 && $count <= 4): ?>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="row">
-                                <div class="col-xs-3"><img class="img-responsive"
-                                                           src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>"/>
-                                </div>
-                                <div class="col-xs-9">
-                                    <p class="testimonial-name"><?php the_title(); ?></p>
-                                    <p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
-
-                                    <div class="hr"></div>
-                                    <div class="row">
-                                        <div class="col-xs-2"><img class="img-responsive" src="quote.png"/></div>
-                                        <div class="col-xs-10 testimonial-content">
-                                            <?php the_content(); ?>
-                                            <p class="ps text-right">Published
-                                                on：<?php echo get_the_date('d/m/Y'); ?></p>
-                                            <p class="sign text-right"><a
-                                                    href="<?php echo get_permalink(get_the_ID()); ?> "
-                                                    style="color: #a60101;">Recruitment Details</a></p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif ?>
-                    <?php if ($count == 4): ?>
-                        </div>
-                    <?php endif ?>
-
-
-                <?php } ?>
+                            <?php $count++;
+                        } ?>
+                    </div>
+                </div>
             </div>
         </div>
+        <a class="left carousel-control" href="#carousel-example-generic1" data-slide="prev"><span
+                class="sr-only">Previous</span><img class="left-arr hidden-xs hidden-sm"
+                                                    src="left-arr.png"/>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic1" data-slide="next"> <span
+                class="sr-only">Next</span> <img class="right-arr hidden-xs hidden-sm" src="right-arr.png"/></a>
+
+    </div>
+
+    <div class="host row newTour">
+        <div class="our-service">
+            <p class="service">NEWツアー/アクティビティーのご紹介<span class="lines"></span></p>
+            <p></p></div>
+        <div class="container list-host">
+            <div id="newTour" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <?php
+                    $count = 0;
+                    $args = array(
+                        'category_name' => 'tourlist',
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                        'posts_per_page' => 6,
+                    );
+
+
+                    $wp_query = new WP_Query();
+                    $wp_query->query($args);
+                    while ($wp_query->have_posts()) {
+                        $wp_query->the_post();
+                        $count++; ?>
+                        <?php if ($count == 1): ?>
+                            <div class="item active">
+                            <div class="row">
+                        <?php endif ?>
+                        <?php if ($count >= 1 && $count < 4): ?>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
+                                            class="host-img" src="<?php the_post_thumbnail_url() ?>"/></a>
+                                </div>
+                                <p class="host-name"><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endif ?>
+                        <?php if ($count == 4): ?>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="row">
+                        <?php endif ?>
+                        <?php if ($count >= 4 && $count <= 6): ?>
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <div class="host-avatar"><a href="<?php echo get_permalink($post->ID); ?>"><img
+                                            class="host-img" src="<?php the_post_thumbnail_url() ?>"/></a>
+                                </div>
+                                <p class="host-name"><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endif ?>
+                        <?php if ($count == 6): ?>
+                            </div>
+                            </div>
+                        <?php endif ?>
+
+
+                    <?php } ?>
+
+
+                    <p></p></div>
+                <p></p></div>
+            <p></p></div>
+        <p><a class="left carousel-control" href="#newTour" data-slide="prev"><span
+                    class="sr-only">Previous</span><img
+                    class="left-arr hidden-xs hidden-sm" src="left-arr.png"> </a><br>
+            <a class="right carousel-control" href="#newTour" data-slide="next"> <span
+                    class="sr-only">Next</span> <img
+                    class="right-arr hidden-xs hidden-sm" src="right-arr.png"></a></p></div>
+    </div>
+
+    <div class="row testimonial">
+        <div class="our-service margin-top-25">
+            <p class="service">testimonial <span class="lines"></span></p>
+
+        </div>
+        <div class="container">
+
+            <?php
+            $count = 0;
+            $args = array(
+                'category_name' => 'testimonial',
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'posts_per_page' => 4,
+            );
+
+
+            $wp_query = new WP_Query();
+            $wp_query->query($args);
+            while ($wp_query->have_posts()) {
+                $wp_query->the_post();
+                $count++; ?>
+                <?php if ($count == 1): ?>
+
+                    <div class="row">
+                <?php endif ?>
+                <?php if ($count >= 1 && $count <= 2): ?>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="row">
+                            <div class="col-xs-3"><img class="img-responsive"
+                                                       src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>"/>
+                            </div>
+                            <div class="col-xs-9">
+                                <p class="testimonial-name"><?php the_title(); ?></p>
+                                <p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+
+                                <div class="hr"></div>
+                                <div class="row">
+                                    <div class="col-xs-2"><img class="img-responsive" src="quote.png"/></div>
+                                    <div class="col-xs-10 testimonial-content">
+                                        <?php the_content(); ?>
+                                        <p class="ps text-right">Published
+                                            on：<?php echo get_the_date('d/m/Y'); ?></p>
+                                        <p class="sign text-right"><a
+                                                href="<?php echo get_permalink(get_the_ID()); ?> "
+                                                style="color: #a60101;">Recruitment Details</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif ?>
+                <?php if ($count == 2): ?>
+                    </div>
+                    <div class="row">
+                <?php endif ?>
+                <?php if ($count >= 3 && $count <= 4): ?>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="row">
+                            <div class="col-xs-3"><img class="img-responsive"
+                                                       src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>"/>
+                            </div>
+                            <div class="col-xs-9">
+                                <p class="testimonial-name"><?php the_title(); ?></p>
+                                <p class="testimonial-job"><?php echo get_post_meta(get_the_ID(), 'job', TRUE); ?></p>
+
+                                <div class="hr"></div>
+                                <div class="row">
+                                    <div class="col-xs-2"><img class="img-responsive" src="quote.png"/></div>
+                                    <div class="col-xs-10 testimonial-content">
+                                        <?php the_content(); ?>
+                                        <p class="ps text-right">Published
+                                            on：<?php echo get_the_date('d/m/Y'); ?></p>
+                                        <p class="sign text-right"><a
+                                                href="<?php echo get_permalink(get_the_ID()); ?> "
+                                                style="color: #a60101;">Recruitment Details</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif ?>
+                <?php if ($count == 4): ?>
+                    </div>
+                <?php endif ?>
+
+
+            <?php } ?>
+        </div>
+    </div>
     </div>
 
 <?php get_footer(); ?>
